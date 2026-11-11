@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Ajukan Karya - Mading Digital SMKN 2 Bandar Lampung</title>
+  
+  <!-- Web Fonts & Icons -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- External CSS System -->
+  <link rel="stylesheet" href="assets/css/theme.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+
+  <!-- Tailwind CSS Engine & Configuration -->
+  <script src="assets/js/tailwind.config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col relative selection:bg-secondary-container selection:text-on-secondary-container">
+  
+  <!-- Ambient background curves -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-60">
+    <svg class="absolute -top-24 left-1/4 w-[1100px] h-[550px] text-surface-container-high" fill="currentColor" viewbox="0 0 1100 550"><path d="M0,280 C320,120 480,420 800,240 C980,140 1060,260 1100,280 L1100,0 L0,0 Z"></path></svg>
+    <svg class="absolute top-1/3 -right-48 w-[800px] h-[600px] text-surface-container-highest opacity-70" fill="currentColor" viewbox="0 0 800 600"><path d="M120,0 C380,80 420,380 720,320 C820,300 800,500 800,600 L0,600 L0,180 Z"></path></svg>
+    <div class="absolute top-28 left-16 text-outline-variant opacity-40"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0L14 9L23 11L14 13L12 22L10 13L1 11L10 9Z"></path></svg></div>
+  </div>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-bright/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(107,48,64,0.06)]">
+    <div class="h-24 max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-5 group">
+        <div class="relative flex-shrink-0 flex items-center justify-center p-1 rounded-full bg-surface-container-low shadow-[0_2px_12px_rgba(107,48,64,0.08)] group-hover:scale-105 transition-transform">
+          <img alt="Logo SMKN 2 Bandar Lampung" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUMl9S6bNpirkdmuR1DYdo9aqLMSdHHkOC1iaBgqUeGedJlkXYZQCaGGKZukeX26voAeztCVgw7xvmdgwVqsJPB9A_gi9LerLBisXznLoBRggN20sX9c9dcF-Wqng440IQmbZu-ZE12c09yWgshrydzOpf487v6zzEeoeXUKuOn1CGmehPURffUAhFkhU7F390YCCN0apZLFos1Zu2J7fLvF8j4W8MrA80bOxZEG8"/>
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+          </div>
+        </div>
+        <div class="hidden sm:block h-12 w-[1px] bg-outline-variant"></div>
+        <div class="flex flex-col justify-center">
+          <div class="flex items-baseline gap-2">
+            <span class="font-headline-lg text-headline-lg text-primary-container tracking-tight leading-none">MADING DIGITAL</span>
+          </div>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="font-label-uppercase text-label-uppercase tracking-[0.25em] text-on-surface-variant font-semibold">SMK NEGERI 2 BANDAR LAMPUNG</span>
+          </div>
+          <div class="hidden xl:flex items-center gap-2 mt-0.5 text-on-surface-variant opacity-80">
+            <span class="w-6 h-[1px] bg-outline-variant"></span>
+            <span class="font-quote-editorial text-body-sm italic">Suara, Karya, dan Inspirasi dari Kita untuk Sekolah</span>
+            <span class="w-6 h-[1px] bg-outline-variant"></span>
+          </div>
+        </div>
+      </a>
+      <div class="flex items-center gap-4">
+        <div class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest shadow-[0_2px_10px_rgba(107,48,64,0.06)] text-primary-container">
+          <span class="material-symbols-outlined text-[18px] text-primary-container">calendar_today</span>
+          <span class="font-label-md text-label-md font-semibold tracking-wide">Edisi November 2026</span>
+        </div>
+        <button id="mobileMenuToggle" class="md:hidden flex items-center justify-center w-11 h-11 rounded-full bg-surface-container text-primary-container hover:bg-surface-container-high transition-colors" type="button" aria-label="Buka Menu">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Desktop Navigation Bar -->
+    <div class="w-full bg-surface-bright/70 pb-3 hidden md:block">
+      <div class="max-w-7xl mx-auto px-6 lg:px-16 flex justify-center">
+        <nav class="inline-flex items-center p-1.5 rounded-full bg-surface-container/80 backdrop-blur-md gap-1.5 shadow-sm">
+          <a class="font-label-lg text-label-lg px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="index.html">Beranda</a>
+          <a class="font-label-lg text-label-lg px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="berita.html">Berita</a>
+          <a class="font-label-lg text-label-lg px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="wall-of-fame.html">Wall of Fame</a>
+          <a class="px-6 py-2 rounded-full bg-primary-container text-on-primary font-semibold shadow-[0_4px_12px_rgba(107,48,64,0.2)] transition-all" href="ajukan-karya.html">Ajukan Karya</a>
+        </nav>
+      </div>
+    </div>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenuDrawer" class="hidden md:hidden px-6 pb-4 bg-surface-bright border-b border-outline-variant/30">
+      <nav class="flex flex-col gap-2 pt-2">
+        <a class="px-4 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium" href="index.html">Beranda</a>
+        <a class="px-4 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium" href="berita.html">Berita</a>
+        <a class="px-4 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium" href="wall-of-fame.html">Wall of Fame</a>
+        <a class="px-4 py-2.5 rounded-2xl bg-primary-container text-on-primary font-semibold shadow-sm" href="ajukan-karya.html">Ajukan Karya</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full pt-28 md:pt-36 relative z-10 flex-1 bg-transparent">
+    <div class="flex flex-col w-full">
+      <div class="max-w-7xl mx-auto w-full px-6 lg:px-16 pt-8 pb-20">
+        
+        <!-- Top Breadcrumb & Page Meta -->
+        <div class="flex items-center justify-between mb-8">
+          <div class="flex items-center gap-3">
+            <a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="index.html">
+              <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+              <span>Kembali ke Beranda</span>
+            </a>
+            <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+            <span class="font-label-uppercase text-label-uppercase tracking-widest text-primary-container font-semibold uppercase">Kanal Redaksi Siswa</span>
+          </div>
+          <div class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high text-primary-container">
+            <span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+            <span class="font-label-md text-label-md font-medium">Batas Kirim Edisi Ini: 28 Nov 2026</span>
+          </div>
+        </div>
+
+        <!-- Editorial Header Section -->
+        <div class="relative mb-12 lg:mb-14">
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8">
+            <div class="max-w-3xl">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed mb-4">
+                <span class="material-symbols-outlined text-[16px]">edit_note</span>
+                <span class="font-label-uppercase text-label-uppercase font-bold tracking-widest uppercase">Open Submission • Vol. 14</span>
+              </div>
+              <h1 class="font-headline-lg text-headline-lg text-primary-container tracking-tight leading-tight">
+                Ajukan Karya Tulisan &amp; Kreasi Siswa
+              </h1>
+              <p class="mt-3 font-body-lg text-body-lg text-secondary max-w-2xl">
+                Salurkan bakat menulis, artikel, cerpen, puisi, atau opini positifmu untuk dibaca seluruh warga sekolah dan abadikan prestasimu di etalase digital SMKN 2 Bandar Lampung.
+              </p>
+            </div>
+            <!-- Quick Submission Metrics Pill -->
+            <div class="flex items-center gap-6 p-4 rounded-3xl bg-surface-container-low shadow-[0_8px_24px_rgba(107,48,64,0.08)] self-start lg:self-auto">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+                  <span class="material-symbols-outlined text-[20px]">auto_stories</span>
+                </div>
+                <div>
+                  <p class="font-headline-sm text-headline-sm text-primary leading-none">142</p>
+                  <p class="font-label-md text-label-md text-secondary mt-0.5">Karya Terbit</p>
+                </div>
+              </div>
+              <div class="w-px h-8 bg-outline-variant"></div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+                  <span class="material-symbols-outlined text-[20px]">verified</span>
+                </div>
+                <div>
+                  <p class="font-headline-sm text-headline-sm text-primary leading-none">48 Jam</p>
+                  <p class="font-label-md text-label-md text-secondary mt-0.5">Kurasi Cepat</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="h-px w-full bg-gradient-to-r from-outline-variant via-secondary-container to-transparent opacity-60"></div>
+        </div>
+
+        <!-- Bento Two-Column Layout (5 cols left, 7 cols right) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- LEFT COLUMN (5 Columns): Panduan, Proses & Redaksi -->
+          <aside class="lg:col-span-5 flex flex-col gap-6">
+            <div class="relative overflow-hidden rounded-3xl bg-surface-container-lowest/90 backdrop-blur-md p-8 shadow-[0_8px_24px_rgba(107,48,64,0.08)]">
+              <div class="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-surface-container-high/60 blur-2xl pointer-events-none"></div>
+              <div class="relative z-10">
+                <!-- Icon Header -->
+                <div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary-container mb-6 shadow-[0_4px_12px_rgba(107,48,64,0.06)]">
+                  <svg class="w-8 h-8 text-primary-container" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24">
+                    <path d="M22 2L11 13"></path>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </div>
+                <div class="inline-block px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-uppercase text-label-uppercase tracking-wider font-semibold mb-2">
+                  PANDUAN PENGAJUAN
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary tracking-tight mb-2">
+                  Kirim Karya
+                </h2>
+                <p class="font-body-md text-body-md text-secondary mb-8">
+                  Punya karya yang ingin dipublikasikan? Yuk, kirim tulisanmu melalui Mading Digital SMKN 2 Bandar Lampung!
+                </p>
+                <!-- 3-Step Process List -->
+                <div class="space-y-6">
+                  <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center shadow-sm">
+                      1
+                    </div>
+                    <div>
+                      <h3 class="font-label-lg text-label-lg text-primary font-bold">Tulis karyamu</h3>
+                      <p class="mt-1 font-body-sm text-body-sm text-secondary leading-relaxed">
+                        Siapkan artikel opini, cerpen, puisi, pantun, resensi buku, atau liputan kegiatan sekolah yang orisinal dan inspiratif.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center shadow-sm">
+                      2
+                    </div>
+                    <div>
+                      <h3 class="font-label-lg text-label-lg text-primary font-bold">Isi formulir</h3>
+                      <p class="mt-1 font-body-sm text-body-sm text-secondary leading-relaxed">
+                        Lengkapi identitas diri, pilih kategori naskah, dan tempelkan draf tulisanmu pada kolom formulir pengajuan di samping.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center shadow-sm">
+                      3
+                    </div>
+                    <div>
+                      <h3 class="font-label-lg text-label-lg text-primary font-bold">Tunggu persetujuan tim Mading</h3>
+                      <p class="mt-1 font-body-sm text-body-sm text-secondary leading-relaxed">
+                        Kurator redaksi sekolah akan menelaah naskahmu dalam kurun waktu 1–2 hari kerja sebelum resmi diterbitkan di halaman publik.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Line Illustration -->
+                <div class="mt-8 p-5 rounded-2xl bg-surface-container/70 flex items-center justify-between gap-4">
+                  <div class="flex items-center gap-3">
+                    <svg class="w-14 h-14 text-primary-container flex-shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 64 64">
+                      <rect height="24" rx="2" width="34" x="12" y="16"></rect>
+                      <line stroke-width="2" x1="8" x2="50" y1="40" y2="40"></line>
+                      <line opacity="0.6" stroke-width="1.2" x1="22" x2="36" y1="23" y2="23"></line>
+                      <line opacity="0.6" stroke-width="1.2" x1="20" x2="38" y1="28" y2="28"></line>
+                      <path d="M48 30 L56 30 L54 42 L50 42 Z" fill="currentColor" fill-opacity="0.1"></path>
+                      <line stroke-width="1.5" x1="50" x2="50" y1="22" y2="30"></line>
+                      <line stroke-width="1.5" x1="53" x2="52" y1="20" y2="30"></line>
+                      <line stroke-width="1.5" x1="55" x2="54" y1="24" y2="30"></line>
+                      <path d="M38 10 L39.5 13.5 L43 15 L39.5 16.5 L38 20 L36.5 16.5 L33 15 L36.5 13.5 Z" fill="currentColor"></path>
+                    </svg>
+                    <div class="min-w-0">
+                      <p class="font-label-uppercase text-label-uppercase tracking-wider text-primary font-bold">KARYA TERBAIK BULANAN</p>
+                      <p class="font-body-sm text-body-sm text-secondary truncate">Akan dianugerahi lencana kehormatan Wall of Fame &amp; sertifikat literasi.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Redaksi Contact Note -->
+                <div class="mt-6 flex items-start gap-3 p-4 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary-container text-[20px] flex-shrink-0 mt-0.5">help_outline</span>
+                  <p class="font-body-sm text-body-sm text-secondary">
+                    Pertanyaan atau kendala pengiriman? Kunjungi pos Pembina Mading di <span class="font-semibold text-primary">Ruang OSIS / Perpustakaan SMKN 2</span> saat jam istirahat.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mini Tips Editorial Card -->
+            <div class="rounded-3xl bg-surface-container p-6 shadow-[0_8px_24px_rgba(107,48,64,0.05)]">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="material-symbols-outlined text-primary text-[22px]">lightbulb</span>
+                <span class="font-headline-sm text-headline-sm text-primary">Tips Kurasi Naskah</span>
+              </div>
+              <ul class="space-y-2.5 font-body-sm text-body-sm text-secondary">
+                <li class="flex items-start gap-2">
+                  <span class="text-primary-container font-bold">•</span>
+                  Gunakan kalimat pembuka yang memikat perhatian pembaca sekolah.
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-primary-container font-bold">•</span>
+                  Sertakan sudut pandang vokasi atau pengalaman nyata di SMKN 2.
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-primary-container font-bold">•</span>
+                  Periksa ejaan dan tata bahasa sesuai Pedoman Umum Ejaan Bahasa Indonesia (PUEBI).
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+          <!-- RIGHT COLUMN (7 Columns): Interactive Submission Form -->
+          <main class="lg:col-span-7 flex flex-col gap-6">
+            <div class="rounded-3xl bg-surface-container-lowest/90 backdrop-blur-md p-8 lg:p-10 shadow-[0_12px_32px_rgba(107,48,64,0.1)]">
+              <div class="flex items-center justify-between pb-6 mb-6 border-b border-outline-variant/30">
+                <div>
+                  <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-uppercase text-label-uppercase tracking-wider font-semibold mb-2">
+                    PORTAL SUBMISI SISWA
+                  </div>
+                  <h2 class="font-headline-sm text-headline-sm text-primary font-bold">
+                    Formulir Pengajuan Naskah
+                  </h2>
+                </div>
+                <span class="material-symbols-outlined text-outline-variant text-[28px]">post_add</span>
+              </div>
+
+              <form class="space-y-6" id="karyaForm">
+                <!-- Field 1 & 2: Row on desktop -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <div class="flex flex-col gap-2">
+                    <label class="font-label-lg text-label-lg font-bold text-primary flex items-center justify-between" for="studentName">
+                      <span>Nama Lengkap <span class="text-error">*</span></span>
+                      <span class="font-label-md text-label-md text-outline font-normal">Sesuai absen</span>
+                    </label>
+                    <div class="relative">
+                      <span class="absolute left-3.5 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[18px]">badge</span>
+                      <input class="w-full h-12 pl-10 pr-4 rounded-2xl bg-surface-bright text-on-surface font-body-md text-body-md shadow-inner placeholder:text-outline-variant focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all" id="studentName" placeholder="Contoh: Muhammad Fikri Haikal" required="" type="text"/>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label class="font-label-lg text-label-lg font-bold text-primary flex items-center justify-between" for="studentClass">
+                      <span>Kelas / Jurusan <span class="text-error">*</span></span>
+                      <span class="font-label-md text-label-md text-outline font-normal">Jurusan</span>
+                    </label>
+                    <div class="relative">
+                      <span class="absolute left-3.5 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[18px]">school</span>
+                      <input class="w-full h-12 pl-10 pr-4 rounded-2xl bg-surface-bright text-on-surface font-body-md text-body-md shadow-inner placeholder:text-outline-variant focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all" id="studentClass" placeholder="Contoh: XI RPL 2 atau X TKJ 1" required="" type="text"/>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Field 3: Judul Tulisan -->
+                <div class="flex flex-col gap-2">
+                  <label class="font-label-lg text-label-lg font-bold text-primary flex items-center justify-between" for="karyaTitle">
+                    <span>Judul Tulisan <span class="text-error">*</span></span>
+                    <span class="font-label-md text-label-md text-outline font-normal" id="titleCharCount">0 / 80 karakter</span>
+                  </label>
+                  <div class="relative">
+                    <span class="absolute left-3.5 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[18px]">title</span>
+                    <input class="w-full h-12 pl-10 pr-4 rounded-2xl bg-surface-bright text-on-surface font-body-md text-body-md shadow-inner placeholder:text-outline-variant focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all" id="karyaTitle" maxlength="80" placeholder="Masukkan judul karya yang menarik..." required="" type="text"/>
+                  </div>
+                </div>
+
+                <!-- Field 4: Kategori Karya -->
+                <div class="flex flex-col gap-2">
+                  <label class="font-label-lg text-label-lg font-bold text-primary" for="karyaCategory">
+                    Kategori Karya <span class="text-error">*</span>
+                  </label>
+                  <div class="relative">
+                    <span class="absolute left-3.5 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[18px]">category</span>
+                    <select class="w-full h-12 pl-10 pr-10 rounded-2xl bg-surface-bright text-on-surface font-body-md text-body-md shadow-inner focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all appearance-none cursor-pointer" id="karyaCategory" required="">
+                      <option disabled="" selected="" value="">Pilih salah satu kategori karya...</option>
+                      <option value="Artikel Opini">Artikel Opini</option>
+                      <option value="Cerpen (Cerita Pendek)">Cerpen (Cerita Pendek)</option>
+                      <option value="Puisi &amp; Pantun">Puisi &amp; Pantun</option>
+                      <option value="Resensi Buku &amp; Karya">Resensi Buku &amp; Karya</option>
+                      <option value="Liputan Kegiatan Sekolah">Liputan Kegiatan Sekolah</option>
+                      <option value="Inovasi &amp; Riset Kejuruan">Inovasi &amp; Riset Kejuruan</option>
+                    </select>
+                    <span class="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none material-symbols-outlined text-outline text-[20px]">expand_more</span>
+                  </div>
+                </div>
+
+                <!-- Field 5: Isi Tulisan -->
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center justify-between">
+                    <label class="font-label-lg text-label-lg font-bold text-primary" for="karyaBody">
+                      Isi Tulisan <span class="text-error">*</span>
+                    </label>
+                    <div class="flex items-center gap-2">
+                      <button class="p-1 rounded hover:bg-surface-container text-secondary transition-colors" id="formatQuoteBtn" title="Sisipkan kutipan" type="button">
+                        <span class="material-symbols-outlined text-[16px]">format_quote</span>
+                      </button>
+                      <span class="font-label-md text-label-md text-outline" id="bodyWordCount">0 kata</span>
+                    </div>
+                  </div>
+                  <textarea class="w-full p-4 rounded-2xl bg-surface-bright text-on-surface font-body-md text-body-md shadow-inner placeholder:text-outline-variant focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all leading-relaxed" id="karyaBody" placeholder="Tuliskan isi karya tulisanmu di sini secara lengkap... (Minimal 50 kata agar memudahkan tim redaksi mengulas pesan utama)" required="" rows="8"></textarea>
+                </div>
+
+                <!-- Field 6: Unggah Gambar Pendukung -->
+                <div class="flex flex-col gap-2">
+                  <label class="font-label-lg text-label-lg font-bold text-primary flex items-center justify-between">
+                    <span>Unggah Gambar Pendukung <span class="font-label-md text-label-md text-outline font-normal">(Opsional)</span></span>
+                    <span class="font-label-md text-label-md text-secondary font-medium">JPG, PNG • Maks. 5MB</span>
+                  </label>
+                  <div class="group relative rounded-2xl p-6 text-center bg-surface-container-low/70 hover:bg-surface-container transition-all cursor-pointer flex flex-col items-center justify-center gap-2 border-2 border-dashed border-outline-variant/50" id="dropZone">
+                    <input accept="image/png, image/jpeg, image/webp" class="hidden" id="fileUploadInput" type="file"/>
+                    <div class="w-12 h-12 rounded-full bg-surface-container-highest group-hover:scale-110 transition-transform flex items-center justify-center text-primary-container">
+                      <span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+                    </div>
+                    <div id="dropZonePrompt">
+                      <p class="font-label-lg text-label-lg text-primary font-semibold group-hover:text-primary-container transition-colors">
+                        Klik untuk memilih gambar atau seret file ke sini
+                      </p>
+                      <p class="font-body-sm text-body-sm text-secondary mt-1">
+                        Format PNG, JPG, maksimal 5MB. Ilustrasi atau foto karya pendukung.
+                      </p>
+                    </div>
+                    <!-- Preview State -->
+                    <div class="hidden flex-col items-center gap-2" id="filePreviewState">
+                      <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-highest text-primary-container font-label-md text-label-md">
+                        <span class="material-symbols-outlined text-[16px]">image</span>
+                        <span class="font-medium truncate max-w-xs" id="fileNameDisplay">foto-karya.jpg</span>
+                        <button class="hover:text-error ml-1" id="clearFileBtn" type="button">
+                          <span class="material-symbols-outlined text-[16px]">close</span>
+                        </button>
+                      </div>
+                      <span class="font-body-sm text-body-sm text-secondary">Berkas siap dilampirkan bersama naskah</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Submit Button & Plagiarism Declaration -->
+                <div class="pt-3">
+                  <button class="w-full py-4 px-8 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary transition-all shadow-[0_4px_16px_rgba(107,48,64,0.2)] active:scale-[0.99] flex items-center justify-center gap-2" id="submitButton" type="submit">
+                    <span>Ajukan Karya Sekarang</span>
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                  </button>
+                  <div class="mt-4 flex items-start gap-2.5 px-2">
+                    <span class="material-symbols-outlined text-outline text-[16px] flex-shrink-0 mt-0.5">verified_user</span>
+                    <p class="font-body-sm text-body-sm text-secondary leading-snug">
+                      Dengan mengirimkan karya, kamu menyatakan bahwa naskah ini adalah karya orisinal, bebas dari plagiasi, dan memberi hak publikasi resmi kepada Redaksi Mading Digital SMKN 2 Bandar Lampung.
+                    </p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </main>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Success Modal Card Preview -->
+  <div class="fixed inset-0 z-50 bg-tertiary-container/40 backdrop-blur-sm hidden items-center justify-center p-4" id="successModal">
+    <div class="max-w-md w-full rounded-3xl bg-surface-container-lowest p-8 shadow-[0_20px_48px_rgba(107,48,64,0.25)] text-center relative overflow-hidden">
+      <!-- Top decorative ring -->
+      <div class="w-20 h-20 rounded-full bg-surface-container-high mx-auto flex items-center justify-center text-primary-container mb-5 shadow-inner">
+        <div class="w-14 h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md">
+          <span class="material-symbols-outlined text-[32px]">check</span>
+        </div>
+      </div>
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-uppercase text-label-uppercase tracking-wider font-semibold mb-3">
+        TERIMA KASIH ATAS KARYAMU!
+      </div>
+      <h3 class="font-headline-sm text-headline-sm text-primary font-bold mb-2">
+        Karya Berhasil Diajukan!
+      </h3>
+      <p class="font-body-md text-body-md text-secondary mb-6 leading-relaxed">
+        Tim redaksi Mading Digital SMKN 2 Bandar Lampung akan meninjau tulisanmu. Kamu akan menerima pembaruan status publikasi melalui pengumuman kelas atau laman mading edisi berikutnya.
+      </p>
+      <div class="p-4 rounded-2xl bg-surface-container-low mb-6 text-left flex items-start gap-3">
+        <span class="material-symbols-outlined text-primary-container text-[20px] flex-shrink-0">bookmark</span>
+        <div class="min-w-0">
+          <p class="font-label-md text-label-md text-primary font-semibold truncate" id="submittedTitleSummary">Judul Tulisan</p>
+          <p class="font-body-sm text-body-sm text-secondary truncate" id="submittedAuthorSummary">Oleh: Siswa SMKN 2 BL</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2.5">
+        <a class="w-full py-3 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary transition-colors text-center shadow-sm" href="index.html">
+          Kembali ke Beranda
+        </a>
+        <button class="w-full py-2.5 rounded-full text-secondary hover:text-primary font-label-md text-label-md font-semibold transition-colors" id="closeModalBtn" type="button">
+          Kirim Karya Lainnya
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w-full relative z-20 bg-primary-container text-on-primary">
+    <div class="h-[72px] max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between relative overflow-hidden">
+      <div class="flex items-center gap-3 opacity-30 select-none">
+        <svg class="w-24 h-10 stroke-current fill-none" stroke-width="1.5" viewbox="0 0 120 40">
+          <path d="M5,35 L115,35 M15,35 L15,18 L35,10 L55,18 L55,35 M55,35 L55,14 L85,8 L105,14 L105,35 M30,19 L40,19 M30,25 L40,25 M75,18 L90,18 M75,25 L90,25 M50,5 L60,5 L55,0 Z"></path>
+        </svg>
+        <span class="hidden lg:inline-block font-label-md text-label-md tracking-wider uppercase font-medium">SMKN 2 BL</span>
+      </div>
+      <div class="flex-1 text-center px-4">
+        <p class="font-label-uppercase text-label-uppercase tracking-[0.25em] text-on-primary font-bold">KREATIVITAS • INFORMASI • INSPIRASI</p>
+      </div>
+      <div class="flex items-center justify-end gap-2 opacity-60 text-right">
+        <span class="font-label-md text-label-md">Mading Digital © 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External Client Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

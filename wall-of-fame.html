@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Wall of Fame - Mading Digital SMKN 2 Bandar Lampung</title>
+  
+  <!-- Web Fonts & Icons -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- External CSS System -->
+  <link rel="stylesheet" href="assets/css/theme.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+
+  <!-- Tailwind CSS Engine & Configuration -->
+  <script src="assets/js/tailwind.config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col relative selection:bg-secondary-container selection:text-on-secondary-container">
+  
+  <!-- Ambient background curves -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-60">
+    <svg class="absolute -top-24 left-1/4 w-[1100px] h-[550px] text-surface-container-high" fill="currentColor" viewbox="0 0 1100 550"><path d="M0,280 C320,120 480,420 800,240 C980,140 1060,260 1100,280 L1100,0 L0,0 Z"></path></svg>
+    <svg class="absolute top-1/3 -right-48 w-[800px] h-[600px] text-surface-container-highest opacity-70" fill="currentColor" viewbox="0 0 800 600"><path d="M120,0 C380,80 420,380 720,320 C820,300 800,500 800,600 L0,600 L0,180 Z"></path></svg>
+    <div class="absolute top-28 left-16 text-outline-variant opacity-40"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0L14 9L23 11L14 13L12 22L10 13L1 11L10 9Z"></path></svg></div>
+  </div>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-bright/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(107,48,64,0.06)]">
+    <div class="h-24 max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-5 group">
+        <div class="relative flex-shrink-0 flex items-center justify-center p-1 rounded-full bg-surface-container-low shadow-[0_2px_12px_rgba(107,48,64,0.08)] group-hover:scale-105 transition-transform">
+          <img alt="Logo SMKN 2 Bandar Lampung" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUMl9S6bNpirkdmuR1DYdo9aqLMSdHHkOC1iaBgqUeGedJlkXYZQCaGGKZukeX26voAeztCVgw7xvmdgwVqsJPB9A_gi9LerLBisXznLoBRggN20sX9c9dcF-Wqng440IQmbZu-ZE12c09yWgshrydzOpf487v6zzEeoeXUKuOn1CGmehPURffUAhFkhU7F390YCCN0apZLFos1Zu2J7fLvF8j4W8MrA80bOxZEG8"/>
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+          </div>
+        </div>
+        <div class="hidden sm:block h-12 w-[1px] bg-outline-variant"></div>
+        <div class="flex flex-col justify-center">
+          <div class="flex items-baseline gap-2">
+            <span class="font-headline-lg text-headline-lg text-primary-container tracking-tight leading-none">MADING DIGITAL</span>
+          </div>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="font-label-uppercase text-label-uppercase tracking-[0.25em] text-on-surface-variant font-semibold">SMK NEGERI 2 BANDAR LAMPUNG</span>
+          </div>
+          <div class="hidden xl:flex items-center gap-2 mt-0.5 text-on-surface-variant opacity-80">
+            <span class="w-6 h-[1px] bg-outline-variant"></span>
+            <span class="font-quote-editorial text-body-sm italic">Suara, Karya, dan Inspirasi dari Kita untuk Sekolah</span>
+            <span class="w-6 h-[1px] bg-outline-variant"></span>
+          </div>
+        </div>
+      </a>
+      <div class="flex items-center gap-4">
+        <div class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest shadow-[0_2px_10px_rgba(107,48,64,0.06)] text-primary-container">
+          <span class="material-symbols-outlined text-[18px] text-primary-container">calendar_today</span>
+          <span class="font-label-md text-label-md font-semibold tracking-wide">Edisi November 2026</span>
+        </div>
+        <button id="mobileMenuToggle" class="md:hidden flex items-center justify-center w-11 h-11 rounded-full bg-surface-container text-primary-container hover:bg-surface-container-high transition-colors" type="button" aria-label="Buka Menu">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Desktop Navigation Bar -->
+    <div class="w-full bg-surface-bright/70 pb-3 hidden md:block">
+      <div class="max-w-7xl mx-auto px-6 lg:px-16 flex justify-center">
+        <nav class="inline-flex items-center p-1.5 rounded-full bg-surface-container/80 backdrop-blur-md gap-1.5 shadow-sm">
+          <a class="font-label-lg text-label-lg px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="index.html">Beranda</a>
+          <a class="font-label-lg text-label-lg px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="berita.html">Berita</a>
+          <a class="px-6 py-2 rounded-full bg-primary-container text-on-primary font-semibold shadow-[0_4px_12px_rgba(107,48,64,0.2)] transition-all" href="wall-of-fame.html">Wall of Fame</a>
+          <a class="font-label-lg text-label-lg px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="ajukan-karya.html">Ajukan Karya</a>
+        </nav>
+      </div>
+    </div>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenuDrawer" class="hidden md:hidden px-6 pb-4 bg-surface-bright border-b border-outline-variant/30">
+      <nav class="flex flex-col gap-2 pt-2">
+        <a class="px-4 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium" href="index.html">Beranda</a>
+        <a class="px-4 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium" href="berita.html">Berita</a>
+        <a class="px-4 py-2.5 rounded-2xl bg-primary-container text-on-primary font-semibold shadow-sm" href="wall-of-fame.html">Wall of Fame</a>
+        <a class="px-4 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium" href="ajukan-karya.html">Ajukan Karya</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full pt-28 md:pt-36 relative z-10 flex-1 bg-transparent">
+    <div class="flex flex-col w-full">
+      <div class="w-full max-w-7xl mx-auto px-6 lg:px-16 py-8">
+        
+        <!-- Top Atmospheric Header -->
+        <header class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary-container shadow-sm">
+                <span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1; font-size: 28px;">emoji_events</span>
+              </div>
+              <span class="font-label-uppercase text-label-uppercase text-secondary tracking-[0.25em] font-bold">Ajang Kehormatan Siswa</span>
+            </div>
+            <h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Wall of Fame</h1>
+            <p class="font-quote-editorial text-quote-editorial text-secondary italic">Terus berprestasi dan jadi inspirasi bagi teman-teman!</p>
+          </div>
+          <!-- Quick Metrics Ribbon -->
+          <div class="flex items-center gap-3 bg-surface-container-low px-5 py-3 rounded-full shadow-sm">
+            <div class="flex -space-x-2">
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary-container text-on-primary font-label-md text-label-md">1st</span>
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-on-secondary font-label-md text-label-md">2nd</span>
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">3rd</span>
+            </div>
+            <div class="h-6 w-px bg-outline-variant"></div>
+            <span class="font-label-md text-label-md text-on-surface-variant font-medium">18 Prestasi Tervalidasi Semester Ganjil</span>
+          </div>
+        </header>
+
+        <!-- Large Featured Bento Card (Highlight of the Month) -->
+        <section class="relative w-full rounded-3xl bg-surface-container-lowest p-8 lg:p-10 mb-14 shadow-xl overflow-hidden">
+          <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-surface-container-high opacity-50 blur-3xl pointer-events-none"></div>
+          <div class="absolute left-1/3 top-0 w-64 h-64 rounded-full bg-secondary-container opacity-20 blur-2xl pointer-events-none"></div>
+          
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <!-- Left: Editorial Polaroid Showcase -->
+            <div class="lg:col-span-5 flex justify-center">
+              <div class="relative group">
+                <!-- Polaroid Container -->
+                <div class="transform -rotate-3 transition duration-500 ease-out group-hover:rotate-0 group-hover:scale-[1.02] bg-surface-container-lowest p-4 pb-7 rounded-2xl shadow-xl w-72 sm:w-80 border border-surface-container polaroid-card">
+                  <!-- Golden Laurel Badge -->
+                  <div class="absolute -top-3.5 -right-3.5 z-20 flex items-center justify-center w-11 h-11 rounded-full bg-primary-container text-on-primary shadow-md">
+                    <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                  </div>
+                  <!-- Student Image -->
+                  <div class="w-full aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-high relative mb-4">
+                    <img class="w-full h-full object-cover" alt="Azka Naufal Rahman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHLFyLDo0pfJCqIBs8KOkYyKMIAerWYB_r8RNw95eCRLPtXcoP5FLbEH_xeKH2loA8w1LH00Lt1oDMVzog98dLPhdpp8CXjYECdAo9RB2095YrX0O32aL1JOow8FqEyeEmLQ157NvEMxiTXoO5voUTgOK0h33janIQR6GjUB9UpR8cptXwjT5S1moDxeERztPrWmstt5pMbk4A7F4rN4W0-W6hm-UAzBMEv1oBX4o"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
+                  </div>
+                  <!-- Polaroid Bottom Signature -->
+                  <div class="flex items-center justify-between px-1">
+                    <div>
+                      <p class="font-headline-sm text-headline-sm text-primary leading-tight">Azka N. R.</p>
+                      <p class="font-label-md text-label-md text-on-surface-variant font-medium">TKJ 1 • SMKN 2 BL</p>
+                    </div>
+                    <div class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-uppercase text-label-uppercase font-bold">
+                      Emas Nasional
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Story & Details Column -->
+            <div class="lg:col-span-7 flex flex-col justify-center gap-5">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-uppercase text-label-uppercase font-bold tracking-wider">
+                  <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  Prestasi Unggulan Bulan Ini
+                </span>
+                <div class="flex items-center gap-1 text-secondary font-label-md text-label-md font-semibold">
+                  <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                  November 2026
+                </div>
+              </div>
+              <div>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-tight">Azka Naufal Rahman</h2>
+                <p class="font-body-md text-body-md text-secondary font-semibold mt-1">Kelas XII Teknik Komputer dan Jaringan (TKJ 1)</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-surface-container-low flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+                </div>
+                <div>
+                  <span class="font-label-uppercase text-label-uppercase text-primary font-bold uppercase tracking-widest block mb-0.5">Pencapaian Tertinggi</span>
+                  <p class="font-headline-sm text-headline-sm text-primary-container leading-snug">Juara 1 Sean Olympic Challenge oleh DCC Global School tingkat Nasional</p>
+                </div>
+              </div>
+              <div class="relative bg-surface-container p-5 rounded-2xl">
+                <span class="material-symbols-outlined text-primary-container/20 text-4xl absolute top-3 right-4 select-none pointer-events-none">format_quote</span>
+                <p class="font-quote-editorial text-body-lg text-on-surface italic leading-relaxed">
+                  “Kemenangan sejati adalah keberanian untuk terus mencoba dan tidak pernah berhenti belajar dari setiap tantangan.”
+                </p>
+              </div>
+              <div class="flex items-center gap-4 pt-2">
+                <div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+                  <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                  <span>Diverifikasi Tim Kesiswaan SMKN 2 Bandar Lampung</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Heading: Grid of Champions -->
+        <div class="flex items-center justify-between mb-8">
+          <div class="flex items-center gap-3">
+            <span class="w-2.5 h-7 rounded-full bg-primary-container"></span>
+            <h3 class="font-headline-md text-headline-md text-primary tracking-tight">Koleksi Juara &amp; Duta Vokasi</h3>
+          </div>
+          <div class="hidden sm:flex items-center gap-2 text-secondary font-label-md text-label-md">
+            <span>Urut Berdasarkan: Terbaru</span>
+            <span class="material-symbols-outlined text-[18px]">expand_more</span>
+          </div>
+        </div>
+
+        <!-- 3-Column Grid of 6 Student Achievement Cards -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          
+          <!-- Card 1: Ahmad Rizky (RPL) -->
+          <article class="group rounded-3xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative bg-surface-container-low p-3.5 pb-5 rounded-2xl shadow-sm mb-5">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container relative">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Ahmad Rizky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFVV4mTk8kiAB7BQ2nAFOzbhsxeyDBszIV1sm1jI_Keyx6Kpw6gxmjAhF25DOGGMXW9fVYPnIgnMB-k9i8gersVfcn3es-TGrKX_YT0bFZQeyFDZ6Tw2HBp8fBKad5QA-Fcixik3GoIZ7Efida2m-YfvDEOyI1ddtMlFZrfx2wQCjHuljRpqeV1cf6lErS4vsFpFObX_1dfJbgoHp7YcmGioQUWM1EnTpjYMmDvEE"/>
+                  <span class="absolute top-2.5 right-2.5 px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-uppercase text-label-uppercase font-bold shadow-sm">
+                    Juara 1 Emas
+                  </span>
+                </div>
+                <div class="flex items-center justify-between mt-3 px-1 text-on-surface-variant">
+                  <span class="font-label-uppercase text-label-uppercase tracking-wider font-semibold text-secondary">Tingkat Provinsi</span>
+                  <span class="material-symbols-outlined text-[18px] text-secondary">military_tech</span>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest font-bold">Teknologi Rekayasa</span>
+                <h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors leading-snug">Ahmad Rizky</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant font-medium">XII Rekayasa Perangkat Lunak (RPL)</p>
+                <p class="font-body-md text-body-md text-on-surface mt-3 font-normal leading-relaxed">
+                  Juara 1 LKS Web Technology Tingkat Provinsi Lampung
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between pt-5 mt-4 bg-surface-container-low -mx-6 -mb-6 p-4 px-6 rounded-b-3xl">
+              <div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md">
+                <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                <span>Oktober 2026</span>
+              </div>
+              <span class="material-symbols-outlined text-primary-container text-[20px] opacity-75 group-hover:translate-x-1 transition-transform">verified</span>
+            </div>
+          </article>
+
+          <!-- Card 2: Nabila Putri (DKV) -->
+          <article class="group rounded-3xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative bg-surface-container-low p-3.5 pb-5 rounded-2xl shadow-sm mb-5">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container relative">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Nabila Putri" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnNyS8SwWh3V3NIB54fzFbTGkK1EOkdufeuFdRhn-KeyNaaH_FFwg6Zr4YYY7dhZJ95jDE0rUbeTCIw_hzZB5XT83JnG9m3B9yz2RJdWEdtxHq64U6IJx2HXLSDGoWUQKHmNA8pn0suocURktgfs2sN0AvwrR0_YdoFT2j3Pz_AX_soCDF1QoJchQdRXydst2zKJGHzQ3AG2RdeSWtM-SVRYXANKBTSZFpatKrsgs"/>
+                  <span class="absolute top-2.5 right-2.5 px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-uppercase text-label-uppercase font-bold shadow-sm">
+                    Juara 2 Perak
+                  </span>
+                </div>
+                <div class="flex items-center justify-between mt-3 px-1 text-on-surface-variant">
+                  <span class="font-label-uppercase text-label-uppercase tracking-wider font-semibold text-secondary">Tingkat Regional</span>
+                  <span class="material-symbols-outlined text-[18px] text-secondary">palette</span>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest font-bold">Desain &amp; Seni Kreatif</span>
+                <h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors leading-snug">Nabila Putri</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant font-medium">XI Desain Komunikasi Visual (DKV)</p>
+                <p class="font-body-md text-body-md text-on-surface mt-3 font-normal leading-relaxed">
+                  Juara 2 Lomba Poster Sumpah Pemuda Tingkat Pelajar se-Sumbagsel
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between pt-5 mt-4 bg-surface-container-low -mx-6 -mb-6 p-4 px-6 rounded-b-3xl">
+              <div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md">
+                <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                <span>Oktober 2026</span>
+              </div>
+              <span class="material-symbols-outlined text-primary-container text-[20px] opacity-75 group-hover:translate-x-1 transition-transform">verified</span>
+            </div>
+          </article>
+
+          <!-- Card 3: Dimas Pratama (TKRO) -->
+          <article class="group rounded-3xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative bg-surface-container-low p-3.5 pb-5 rounded-2xl shadow-sm mb-5">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container relative">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Dimas Pratama" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo2J4hfWQ78j_3_0aDpY0SmEPzJmi9c3o4rX2en79f0tTOeIDeYyhxonP0awUuT7JNX1PGqt-zHjvBIXHakIOTRhjvGBDYvKTdDzVulapk2gi7sFsy35OTgadowriycMtP6ZvW4jjlrPiJ7eTGjyofosjsA6fbft4Gv5FT84KfrbsN-pDSwrY6DKqsxZAO29xFIdJtOb0aSmPfVefJ7316pLW4cMdOTwqa5szMC4E"/>
+                  <span class="absolute top-2.5 right-2.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-uppercase text-label-uppercase font-bold shadow-sm">
+                    Finalis
+                  </span>
+                </div>
+                <div class="flex items-center justify-between mt-3 px-1 text-on-surface-variant">
+                  <span class="font-label-uppercase text-label-uppercase tracking-wider font-semibold text-secondary">Tingkat Nasional</span>
+                  <span class="material-symbols-outlined text-[18px] text-secondary">directions_car</span>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest font-bold">Otomotif &amp; Manufaktur</span>
+                <h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors leading-snug">Dimas Pratama</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant font-medium">X Teknik Kendaraan Ringan Otomotif (TKRO)</p>
+                <p class="font-body-md text-body-md text-on-surface mt-3 font-normal leading-relaxed">
+                  Finalis Olimpiade Sains &amp; Otomotif Vokasi Nasional
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between pt-5 mt-4 bg-surface-container-low -mx-6 -mb-6 p-4 px-6 rounded-b-3xl">
+              <div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md">
+                <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                <span>Oktober 2026</span>
+              </div>
+              <span class="material-symbols-outlined text-primary-container text-[20px] opacity-75 group-hover:translate-x-1 transition-transform">verified</span>
+            </div>
+          </article>
+
+          <!-- Card 4: Siti Nurhaliza (Akuntansi) -->
+          <article class="group rounded-3xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative bg-surface-container-low p-3.5 pb-5 rounded-2xl shadow-sm mb-5">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container relative">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Siti Nurhaliza" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0ZdojdSrX2KiX4Urs-J2qPI9Wh_7sHUCOaEI0FPzTa-Wl7KK8Fink4IU6nIFfAUDxl254UvhFnKa6Q7ywAtyuaHkQCbPdFvV8HRMYP3QQtgx0Fsz_9hFTHehVQiU6WIYbnTQSD9VGqqQcuytkMn7RiEvKHZ8UUSAfwaWnK57v7bIAV3bmokdrdRKZz6v8fleFV-eg0dyJWoSpXNHifcYTWaXBKnIjH9zyb90RRRY"/>
+                  <span class="absolute top-2.5 right-2.5 px-3 py-1 rounded-full bg-surface-container-highest text-primary-container font-label-uppercase text-label-uppercase font-bold shadow-sm">
+                    Harapan 1
+                  </span>
+                </div>
+                <div class="flex items-center justify-between mt-3 px-1 text-on-surface-variant">
+                  <span class="font-label-uppercase text-label-uppercase tracking-wider font-semibold text-secondary">Tingkat Perguruan Tinggi</span>
+                  <span class="material-symbols-outlined text-[18px] text-secondary">account_balance</span>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest font-bold">Bisnis &amp; Keuangan</span>
+                <h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors leading-snug">Siti Nurhaliza</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant font-medium">XII Akuntansi &amp; Keuangan Lembaga</p>
+                <p class="font-body-md text-body-md text-on-surface mt-3 font-normal leading-relaxed">
+                  Juara Harapan 1 Lomba Cerdas Cermat Akuntansi Tingkat Universitas
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between pt-5 mt-4 bg-surface-container-low -mx-6 -mb-6 p-4 px-6 rounded-b-3xl">
+              <div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md">
+                <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                <span>November 2026</span>
+              </div>
+              <span class="material-symbols-outlined text-primary-container text-[20px] opacity-75 group-hover:translate-x-1 transition-transform">verified</span>
+            </div>
+          </article>
+
+          <!-- Card 5: Bayu Setiawan (Teknik Pengelasan) -->
+          <article class="group rounded-3xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative bg-surface-container-low p-3.5 pb-5 rounded-2xl shadow-sm mb-5">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container relative">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Bayu Setiawan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4jyEbaRWlooKRf80VPv3SdeaiASGpYtNSboekVvwkmO5fwYhZYSLrg1s7-Zix2oUXFbc6n2tcOIzoWuTPJ_XW7dyCIzHJuxTd3dWgjCDXJBF0-Szz4Vxmn5mhoobKoUYqJc9J3BJSGERR3f0NL4pV-E3mYUBIzSPztYsALIguGGi7ovD_YSnSxH1l4G1Gpy4rNiu_ZMgkV8WxLm_LHscMFHimOnKLJBMZHj2e058"/>
+                  <span class="absolute top-2.5 right-2.5 px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-uppercase text-label-uppercase font-bold shadow-sm">
+                    Sertifikasi Unggul
+                  </span>
+                </div>
+                <div class="flex items-center justify-between mt-3 px-1 text-on-surface-variant">
+                  <span class="font-label-uppercase text-label-uppercase tracking-wider font-semibold text-secondary">Standar Nasional BNSP</span>
+                  <span class="material-symbols-outlined text-[18px] text-secondary">construction</span>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest font-bold">Teknik Manufaktur</span>
+                <h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors leading-snug">Bayu Setiawan</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant font-medium">XI Teknik Pengelasan</p>
+                <p class="font-body-md text-body-md text-on-surface mt-3 font-normal leading-relaxed">
+                  Peringkat Terbaik Uji Sertifikasi Kompetensi Fabrikasi Logam BNSP
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between pt-5 mt-4 bg-surface-container-low -mx-6 -mb-6 p-4 px-6 rounded-b-3xl">
+              <div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md">
+                <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                <span>September 2026</span>
+              </div>
+              <span class="material-symbols-outlined text-primary-container text-[20px] opacity-75 group-hover:translate-x-1 transition-transform">verified</span>
+            </div>
+          </article>
+
+          <!-- Card 6: Tiara Maharani (Multimedia) -->
+          <article class="group rounded-3xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative bg-surface-container-low p-3.5 pb-5 rounded-2xl shadow-sm mb-5">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container relative">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Tiara Maharani" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfraB1qGMoMCsLMpSoq8eVi4RyNZ3IY5oInYA7w-ERxBGxgISXKo-ecY5Xh94Odly-5P_rT8UW4ZM-PL8OF7cz-zfBCtwXsKmWK1PC5RIB5I9oXZSVwJtmht35BHcM7dKIOjmfmwlsBnJLm5J7iW8TVycMGyzPwrw--j49Vhs0QPRNtscg3Ri6_OEDZ0GNbPtoe-zRh6Wnx-1cCZQCmsarMrbuLewenbDSvUNI21o"/>
+                  <span class="absolute top-2.5 right-2.5 px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-uppercase text-label-uppercase font-bold shadow-sm">
+                    Juara 1 Emas
+                  </span>
+                </div>
+                <div class="flex items-center justify-between mt-3 px-1 text-on-surface-variant">
+                  <span class="font-label-uppercase text-label-uppercase tracking-wider font-semibold text-secondary">Festival Film Daerah</span>
+                  <span class="material-symbols-outlined text-[18px] text-secondary">movie</span>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest font-bold">Broadcasting &amp; Film</span>
+                <h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors leading-snug">Tiara Maharani</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant font-medium">XII Multimedia</p>
+                <p class="font-body-md text-body-md text-on-surface mt-3 font-normal leading-relaxed">
+                  Juara 1 Festival Film Pendek Dokumenter Kearifan Lokal Lampung
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between pt-5 mt-4 bg-surface-container-low -mx-6 -mb-6 p-4 px-6 rounded-b-3xl">
+              <div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md">
+                <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                <span>Oktober 2026</span>
+              </div>
+              <span class="material-symbols-outlined text-primary-container text-[20px] opacity-75 group-hover:translate-x-1 transition-transform">verified</span>
+            </div>
+          </article>
+
+        </section>
+
+        <!-- Bottom Editorial Call-to-Action: Inspiration Banner -->
+        <section class="w-full rounded-3xl bg-gradient-to-r from-primary-container via-primary to-tertiary text-on-primary p-8 md:p-10 shadow-xl mb-12 relative overflow-hidden">
+          <div class="absolute -right-12 -top-12 w-64 h-64 rounded-full bg-white/10 blur-xl pointer-events-none"></div>
+          <div class="absolute left-1/4 -bottom-10 w-80 h-32 bg-white/5 rounded-full blur-lg pointer-events-none"></div>
+          
+          <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="flex items-start gap-5 max-w-2xl">
+              <div class="w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center flex-shrink-0 text-white shadow-inner">
+                <span class="material-symbols-outlined text-[32px]">campaign</span>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <h3 class="font-headline-sm text-headline-sm text-on-primary tracking-tight">Punya prestasi yang ingin kamu banggakan di Wall of Fame?</h3>
+                <p class="font-body-md text-body-md text-white/80 leading-relaxed">
+                  Laporkan prestasimu ke tim Mading untuk dimuat pada edisi berikutnya. Baik tingkat kota, provinsi, hingga internasional!
+                </p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-full md:w-auto">
+              <a class="inline-flex items-center justify-center gap-2.5 w-full md:w-auto px-8 py-3.5 rounded-full bg-surface-container-lowest text-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-surface-container-low hover:scale-105 active:scale-95 transition-all duration-200" href="ajukan-karya.html">
+                <span>Ajukan Prestasimu</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full relative z-20 bg-primary-container text-on-primary">
+    <div class="h-[72px] max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between relative overflow-hidden">
+      <div class="flex items-center gap-3 opacity-30 select-none">
+        <svg class="w-24 h-10 stroke-current fill-none" stroke-width="1.5" viewbox="0 0 120 40">
+          <path d="M5,35 L115,35 M15,35 L15,18 L35,10 L55,18 L55,35 M55,35 L55,14 L85,8 L105,14 L105,35 M30,19 L40,19 M30,25 L40,25 M75,18 L90,18 M75,25 L90,25 M50,5 L60,5 L55,0 Z"></path>
+        </svg>
+        <span class="hidden lg:inline-block font-label-md text-label-md tracking-wider uppercase font-medium">SMKN 2 BL</span>
+      </div>
+      <div class="flex-1 text-center px-4">
+        <p class="font-label-uppercase text-label-uppercase tracking-[0.25em] text-on-primary font-bold">KREATIVITAS • INFORMASI • INSPIRASI</p>
+      </div>
+      <div class="flex items-center justify-end gap-2 opacity-60 text-right">
+        <span class="font-label-md text-label-md">Mading Digital © 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External Client Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

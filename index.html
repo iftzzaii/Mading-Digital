@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Beranda - Mading Digital SMKN 2 Bandar Lampung</title>
+  
+  <!-- Web Fonts & Icons -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- External CSS System -->
+  <link rel="stylesheet" href="assets/css/theme.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+
+  <!-- Tailwind CSS Engine & Configuration -->
+  <script src="assets/js/tailwind.config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col relative selection:bg-secondary-container selection:text-on-secondary-container">
+  
+  <!-- Ambient background curves & sparkles -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-60">
+    <svg class="absolute -top-24 left-1/4 w-[1100px] h-[550px] text-surface-container-high" fill="currentColor" viewbox="0 0 1100 550"><path d="M0,280 C320,120 480,420 800,240 C980,140 1060,260 1100,280 L1100,0 L0,0 Z"></path></svg>
+    <svg class="absolute top-1/3 -right-48 w-[800px] h-[600px] text-surface-container-highest opacity-70" fill="currentColor" viewbox="0 0 800 600"><path d="M120,0 C380,80 420,380 720,320 C820,300 800,500 800,600 L0,600 L0,180 Z"></path></svg>
+    <div class="absolute top-28 left-16 text-outline-variant opacity-40"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0L14 9L23 11L14 13L12 22L10 13L1 11L10 9Z"></path></svg></div>
+    <div class="absolute top-52 right-32 text-outline-variant opacity-30"><svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0L14 9L23 11L14 13L12 22L10 13L1 11L10 9Z"></path></svg></div>
+    <div class="absolute bottom-40 left-1/3 text-outline-variant opacity-25"><svg class="w-3 h-3" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0L14 9L23 11L14 13L12 22L10 13L1 11L10 9Z"></path></svg></div>
+  </div>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-bright/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(107,48,64,0.06)]">
+    <div class="h-24 max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-5 group">
+        <div class="relative flex-shrink-0 flex items-center justify-center p-1 rounded-full bg-surface-container-low shadow-[0_2px_12px_rgba(107,48,64,0.08)] group-hover:scale-105 transition-transform">
+          <img alt="Logo SMKN 2 Bandar Lampung" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUMl9S6bNpirkdmuR1DYdo9aqLMSdHHkOC1iaBgqUeGedJlkXYZQCaGGKZukeX26voAeztCVgw7xvmdgwVqsJPB9A_gi9LerLBisXznLoBRggN20sX9c9dcF-Wqng440IQmbZu-ZE12c09yWgshrydzOpf487v6zzEeoeXUKuOn1CGmehPURffUAhFkhU7F390YCCN0apZLFos1Zu2J7fLvF8j4W8MrA80bOxZEG8"/>
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+          </div>
+        </div>
+        <div class="hidden sm:block h-12 w-[1px] bg-outline-variant"></div>
+        <div class="flex flex-col justify-center">
+          <div class="flex items-baseline gap-2">
+            <span class="font-headline-lg text-headline-lg text-primary-container tracking-tight leading-none">MADING DIGITAL</span>
+          </div>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="font-label-uppercase text-label-uppercase tracking-[0.25em] text-on-surface-variant font-semibold">SMK NEGERI 2 BANDAR LAMPUNG</span>
+          </div>
+          <div class="hidden xl:flex items-center gap-2 mt-0.5 text-on-surface-variant opacity-80">
+            <span class="w-6 h-[1px] bg-outline-variant"></span>
+            <span class="font-quote-editorial text-body-sm italic">Suara, Karya, dan Inspirasi dari Kita untuk Sekolah</span>
+            <span class="w-6 h-[1px] bg-outline-variant"></span>
+          </div>
+        </div>
+      </a>
+      <div class="flex items-center gap-4">
+        <div class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest shadow-[0_2px_10px_rgba(107,48,64,0.06)] text-primary-container">
+          <span class="material-symbols-outlined text-[18px] text-primary-container">calendar_today</span>
+          <span class="font-label-md text-label-md font-semibold tracking-wide">Edisi November 2026</span>
+        </div>
+        <button id="mobileMenuToggle" class="md:hidden flex items-center justify-center w-11 h-11 rounded-full bg-surface-container text-primary-container hover:bg-surface-container-high transition-colors" type="button" aria-label="Buka Menu">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Desktop Navigation Bar -->
+    <div class="w-full bg-surface-bright/70 pb-3 hidden md:block">
+      <div class="max-w-7xl mx-auto px-6 lg:px-16 flex justify-center">
+        <nav class="inline-flex items-center p-1.5 rounded-full bg-surface-container/80 backdrop-blur-md gap-1.5 shadow-sm">
+          <a class="px-6 py-2 rounded-full bg-primary-container text-on-primary font-semibold shadow-[0_4px_12px_rgba(107,48,64,0.2)] transition-all" href="index.html">Beranda</a>
+          <a class="font-label-lg text-label-lg px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="berita.html">Berita</a>
+          <a class="font-label-lg text-label-lg px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="wall-of-fame.html">Wall of Fame</a>
+          <a class="font-label-lg text-label-lg px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="ajukan-karya.html">Ajukan Karya</a>
+        </nav>
+      </div>
+    </div>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenuDrawer" class="hidden md:hidden px-6 pb-4 bg-surface-bright border-b border-outline-variant/30">
+      <nav class="flex flex-col gap-2 pt-2">
+        <a class="px-4 py-2.5 rounded-2xl bg-primary-container text-on-primary font-semibold shadow-sm" href="index.html">Beranda</a>
+        <a class="px-4 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium" href="berita.html">Berita</a>
+        <a class="px-4 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium" href="wall-of-fame.html">Wall of Fame</a>
+        <a class="px-4 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium" href="ajukan-karya.html">Ajukan Karya</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full pt-28 md:pt-36 relative z-10 flex-1 bg-transparent">
+    <div class="flex flex-col w-full">
+      <div class="max-w-[1440px] mx-auto w-full px-6 lg:px-12 py-8 relative">
+        
+        <!-- Editorial Intro / Bento Grid Header Ribbon -->
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container shadow-sm">
+              <span class="material-symbols-outlined text-[18px]">auto_stories</span>
+            </span>
+            <div class="flex flex-col">
+              <span class="font-label-uppercase text-label-uppercase tracking-[0.2em] text-secondary">EDISI TERKINI • SEMESTER GANJIL</span>
+              <span class="font-quote-editorial text-body-sm italic text-on-surface-variant">Sorotan Pengumuman, Prestasi, dan Warta Kejuruan</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+            <span class="font-label-md text-label-md text-on-surface-variant font-medium">Kurasi redaksi diperbarui hari ini</span>
+          </div>
+        </div>
+
+        <!-- 12-Column Bento Grid Container -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          
+          <!-- ================= LEFT COLUMN (7 COLS) ================= -->
+          <section class="lg:col-span-7 flex flex-col gap-6">
+            
+            <!-- Card 1: Headline Pengumuman -->
+            <article class="relative overflow-hidden rounded-3xl bg-surface-container-lowest/90 backdrop-blur-md p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div class="absolute -top-20 -right-20 w-56 h-56 rounded-full bg-secondary-container/20 blur-2xl pointer-events-none"></div>
+              
+              <!-- Top-left category tag badge -->
+              <div class="flex items-center justify-between gap-3 mb-6 relative z-10">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md tracking-wider uppercase shadow-sm">
+                  <span class="material-symbols-outlined text-[16px]">campaign</span>
+                  Headline Pengumuman
+                </span>
+                <span class="font-label-uppercase text-label-uppercase text-outline tracking-widest hidden sm:inline">PENGUMUMAN RESMI</span>
+              </div>
+
+              <!-- 2-Column Split: Visual Flyer & Editorial Details -->
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center relative z-10">
+                <!-- Poster Flyer -->
+                <div class="md:col-span-5 relative group">
+                  <a href="detail-pengumuman.html" class="block">
+                    <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-md">
+                      <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" alt="Poster Hari Pahlawan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdZLSa2tC1Q0VX54tapZoAecdkbdr9ifC5fBZkev5rvYm3jYpOzGB4z6spqcqADhgj0jgs_QUcrpWBVXNeaddMRDLTiIgdY1DdibbEAz5Sf3g3rfWzhQIw8TWFWO91swAbGApOzetXhqKfVCfyZv69MqE5awp4LOo7yb7aIA2yU7kbKPxz6AOv7caPojfzZoYasaQxGwwKhY_XeHBhlZ9l-Xkusk73FujZtWFOeMQ"/>
+                      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-80"></div>
+                      <div class="absolute bottom-3 left-3 right-3 text-on-primary">
+                        <span class="font-label-uppercase text-[10px] tracking-widest uppercase bg-surface-container-lowest/20 backdrop-blur-sm px-2 py-0.5 rounded text-white inline-block mb-1">10 NOVEMBER</span>
+                        <p class="font-headline-sm text-label-lg leading-tight font-bold text-white drop-shadow-sm">Hari Pahlawan Nasional</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Editorial Text & Action -->
+                <div class="md:col-span-7 flex flex-col justify-between h-full space-y-4">
+                  <div class="space-y-3">
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-primary-container font-label-md text-label-md">
+                      <span class="material-symbols-outlined text-[15px]">calendar_today</span>
+                      <span>10 November 2026</span>
+                    </div>
+                    <h1 class="font-headline-lg text-headline-lg text-on-background leading-tight">
+                      <a href="detail-pengumuman.html" class="hover:text-primary-container transition-colors">
+                        Memperingati Hari Pahlawan
+                      </a>
+                    </h1>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                      Mari kenang jasa para pahlawan dan teruskan semangatnya untuk masa depan bangsa. Melalui karya teknologi, inovasi vokasi, dan integritas pelajar SMKN 2 Bandar Lampung.
+                    </p>
+                  </div>
+                  <div class="pt-2 flex items-center gap-3">
+                    <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg tracking-wide shadow-md transition-all duration-200 group/btn" href="detail-pengumuman.html">
+                      <span>Baca Selengkapnya</span>
+                      <span class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                    <button class="w-11 h-11 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-primary-container flex items-center justify-center transition-colors" title="Simpan pengumuman" type="button" data-bookmark-btn data-bookmarked="false">
+                      <span class="material-symbols-outlined text-[20px]">bookmark</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2: Berita & Informasi -->
+            <article class="relative rounded-3xl bg-surface-container-lowest/90 backdrop-blur-md p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex items-center justify-between pb-4 mb-6 border-b border-outline-variant/30">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-2xl bg-surface-container flex items-center justify-center text-primary-container shadow-xs">
+                    <span class="material-symbols-outlined text-[22px]">newspaper</span>
+                  </div>
+                  <h2 class="font-headline-md text-headline-sm text-on-background">
+                    Berita &amp; Informasi
+                  </h2>
+                </div>
+                <a class="inline-flex items-center gap-1 font-label-lg text-label-lg text-primary-container hover:text-primary transition-colors font-semibold group/link" href="berita.html">
+                  <span>Lihat Semua</span>
+                  <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-0.5 transition-transform">arrow_forward</span>
+                </a>
+              </div>
+
+              <!-- 3 News Items: Horizontal Row on Desktop with Divider Lines -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- News Item A -->
+                <a href="berita.html" class="flex flex-col group cursor-pointer">
+                  <div class="relative aspect-video w-full rounded-2xl overflow-hidden mb-3 bg-surface-container">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Pelaksanaan TKA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsL2SifMnzyWVOwEWBmHB1H5UUfUWiNYeqmN_rTBP5Qadl8pjTOFXp5FOjVuZLrQGutMDr-CTHoMH5cEM1cNyy_MMAY0-piCQeSclstLuDthDnX__Ii2MYFWVW5RZPa7dhDU1qa0ppxHhw3482284y4DVjKXxVy_kC4DSEMxxYO-qKUqpYtgSOzQY9G1PHHesXkwEkb2Oc2i5s61IlaWk5SUiUUeVFZrlWZgJJ-MU"/>
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-secondary font-label-md text-label-md font-semibold tracking-wide shadow-xs">
+                      Pendidikan
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-1.5 text-on-surface-variant mb-1.5">
+                    <span class="material-symbols-outlined text-[14px]">calendar_today</span>
+                    <span class="font-label-md text-label-md">26 Okt – 6 Nov 2026</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container transition-colors line-clamp-2 leading-snug">
+                    Pelaksanaan TKA 2026
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+                    Simulasi dan jadwal teknis Tes Kemampuan Akademik bagi seluruh siswa tingkat akhir kejuruan.
+                  </p>
+                </a>
+
+                <!-- News Item B -->
+                <a href="berita.html" class="flex flex-col group cursor-pointer md:pl-6 md:border-l md:border-outline-variant/30">
+                  <div class="relative aspect-video w-full rounded-2xl overflow-hidden mb-3 bg-surface-container">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Lomba Poster Sumpah Pemuda" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFXeE7pnKTU1FbQ_iSQIhX6qXSGSWBHVfEstE0JXpbIG4-hYRCzqr2x7Gp1iK6dLor2U5-GAVme00MgGFW6AUGHDaS0foE41UwSU0B1eoaHVsMQ-gT7X7_AUDHTn3IFWR6tnmIcbkR1caU6TbRAir6zdUvyfQCs-80GYiCI96NNnUPwbfuSUmY8unB1OZIOsSeuooUNAVLArIg1hycmiLckGO3A71BOEALn80h4EU"/>
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-secondary font-label-md text-label-md font-semibold tracking-wide shadow-xs">
+                      Kegiatan
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-1.5 text-on-surface-variant mb-1.5">
+                    <span class="material-symbols-outlined text-[14px]">calendar_today</span>
+                    <span class="font-label-md text-label-md">28 Oktober 2026</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container transition-colors line-clamp-2 leading-snug">
+                    Lomba Poster Sumpah Pemuda
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+                    Ajang adu kreasi visual digital antar jurusan menyemarakkan persatuan pemuda Indonesia.
+                  </p>
+                </a>
+
+                <!-- News Item C -->
+                <a href="berita.html" class="flex flex-col group cursor-pointer md:pl-6 md:border-l md:border-outline-variant/30">
+                  <div class="relative aspect-video w-full rounded-2xl overflow-hidden mb-3 bg-surface-container">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Keluarga Besar Berduka" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCJlLVkyySJEAu3W0LF95alAK-XN4Gq-9K934VeYVLJsFJYoTt6myYZbYf5ZGy8zm8sV6uR16inuHwGUCW907NSR3ivP2vuMtyXA9sls16B-xC4CbjM4gg3FY6yHa9FPQyc55YNTm-a1bVnYjQRuBSc13j5PG0kEYDLAfKC65KGetFfPyDV1--RR3zqnyXjJ0-ElofaP6b4YCKMrcA2nr0uojdQtKMHzl2pyYgZV4"/>
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-secondary font-label-md text-label-md font-semibold tracking-wide shadow-xs">
+                      Warta Khusus
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-1.5 text-on-surface-variant mb-1.5">
+                    <span class="material-symbols-outlined text-[14px]">calendar_today</span>
+                    <span class="font-label-md text-label-md">28 Oktober 2026</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container transition-colors line-clamp-2 leading-snug">
+                    Keluarga Besar Berduka
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+                    Ungkapan belasungkawa mendalam atas berpulangnya salah satu pendidik teladan kami.
+                  </p>
+                </a>
+              </div>
+            </article>
+          </section>
+
+          <!-- ================= RIGHT COLUMN (5 COLS) ================= -->
+          <aside class="lg:col-span-5 flex flex-col gap-6">
+            
+            <!-- Card 1: Wall of Fame -->
+            <article class="relative rounded-3xl bg-surface-container-lowest/90 backdrop-blur-md p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex items-center justify-between pb-4 mb-6 border-b border-outline-variant/30">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-2xl bg-secondary-container/40 flex items-center justify-center text-primary-container shadow-xs">
+                    <span class="material-symbols-outlined text-[22px]">emoji_events</span>
+                  </div>
+                  <h2 class="font-headline-md text-headline-sm text-on-background">
+                    Wall of Fame
+                  </h2>
+                </div>
+                <a class="inline-flex items-center gap-1 font-label-lg text-label-lg text-primary-container hover:text-primary transition-colors font-semibold group/link" href="wall-of-fame.html">
+                  <span>Lihat Semua</span>
+                  <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-0.5 transition-transform">arrow_forward</span>
+                </a>
+              </div>
+
+              <!-- Polaroid Concept Section -->
+              <div class="flex flex-col items-center pt-2">
+                <div class="relative w-64 transform -rotate-3 hover:rotate-0 transition-transform duration-300 p-3.5 pb-6 bg-surface-container-lowest rounded-xl shadow-[0_12px_30px_rgba(107,48,64,0.14)] polaroid-card">
+                  <!-- Golden crown badge -->
+                  <div class="absolute -top-3 -left-3 w-9 h-9 rounded-full bg-amber-400 text-on-primary-fixed flex items-center justify-center shadow-md z-20">
+                    <span class="material-symbols-outlined text-[18px]">crown</span>
+                  </div>
+                  <!-- Student Polaroid Photo -->
+                  <div class="w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container relative">
+                    <img class="w-full h-full object-cover" alt="Azka Naufal Rahman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqdcqaThold23h_7BPSFay16_PCZCOCI8W-aI5lhGl4qS_KzSDSTlAc0dPLqfIxqGEUCgWlEvLok0LUeG5eQd88yCdRiZRueYPCYYIN5r7pFC2XlJuFSTtlramt5nS_AtxMgM39cSTqfM0_gfTW_K2ll6cC0DzVTfNsLc17qxAyr9eXLUmNu3TRHvu93pZEC0XAF0C9l_3wLjuts7q1kryj_LSZAmOGwarhiDblxM"/>
+                  </div>
+                  <!-- Bottom caption -->
+                  <div class="text-center mt-3">
+                    <span class="font-quote-editorial text-body-sm italic text-secondary">Siswa Berprestasi 2026</span>
+                  </div>
+                </div>
+
+                <!-- Student Metadata -->
+                <div class="w-full mt-6 text-center space-y-2">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                    Azka Naufal Rahman
+                  </h3>
+                  <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold">
+                    <span class="material-symbols-outlined text-[15px]">military_tech</span>
+                    <span>Juara 1 Sean Olympic Challenge • DCC Global School</span>
+                  </div>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Jurusan Rekayasa Perangkat Lunak (RPL) - Kelas XII
+                  </p>
+                </div>
+
+                <!-- Quote Box -->
+                <div class="w-full mt-5 p-4 rounded-xl bg-surface-container border-l-4 border-secondary text-left">
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">format_quote</span>
+                    <p class="font-quote-editorial text-body-md italic text-on-surface leading-relaxed">
+                      "Terus berprestasi dan jadi inspirasi bagi teman-teman! Kerja keras di bangku vokasi adalah pintu gerbang karya nyata."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2: Kirim Karya -->
+            <article class="relative overflow-hidden rounded-3xl bg-surface-container-lowest/90 backdrop-blur-md p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div class="absolute -bottom-10 -right-10 w-44 h-44 rounded-full bg-secondary-container/30 blur-2xl pointer-events-none"></div>
+              <div class="relative z-10 flex flex-col justify-between h-full">
+                <div>
+                  <div class="w-12 h-12 rounded-2xl bg-surface-container flex items-center justify-center text-primary-container mb-4 shadow-xs">
+                    <span class="material-symbols-outlined text-[26px]">send</span>
+                  </div>
+                  <h2 class="font-headline-md text-headline-sm text-on-surface mb-2 font-semibold">
+                    Punya karya yang ingin dipublikasikan?
+                  </h2>
+                  <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Yuk, kirim tulisanmu, cerpen, opini, karya seni rupa, atau proyek teknologi kebanggaanmu melalui Mading Digital!
+                  </p>
+                </div>
+                <div class="flex items-center justify-between gap-4 mt-2">
+                  <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg tracking-wide shadow-md transition-all duration-200 group/submit" href="ajukan-karya.html">
+                    <span>Ajukan Karya</span>
+                    <span class="material-symbols-outlined text-[18px] group-hover/submit:translate-x-1 transition-transform">arrow_forward</span>
+                  </a>
+                  <!-- Clean line illustration: Laptop with pencil cup -->
+                  <div class="shrink-0 text-primary-container opacity-85">
+                    <svg class="w-20 h-16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 96 72">
+                      <rect class="fill-surface-container-lowest" height="34" rx="4" width="52" x="14" y="16"></rect>
+                      <line x1="14" x2="66" y1="44" y2="44"></line>
+                      <path class="fill-surface-container" d="M6 54 L74 54 C76 54 77 52 76 50 L70 48 L10 48 L4 50 C3 52 4 54 6 54 Z"></path>
+                      <line class="text-secondary" stroke-width="2" x1="22" x2="38" y1="24" y2="24"></line>
+                      <line x1="22" x2="56" y1="30" y2="30"></line>
+                      <line x1="22" x2="48" y1="36" y2="36"></line>
+                      <rect class="fill-surface-container" height="20" rx="2" width="14" x="74" y="32"></rect>
+                      <line x1="77" x2="74" y1="32" y2="18"></line>
+                      <line x1="82" x2="84" y1="32" y2="16"></line>
+                      <line x1="85" x2="88" y1="32" y2="22"></line>
+                      <path class="text-secondary" d="M82 4 L83 8 L87 9 L83 10 L82 14 L81 10 L77 9 L81 8 Z" fill="currentColor" stroke="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </aside>
+        </div>
+
+        <!-- Bottom Secondary Announcement Ribbon -->
+        <div class="mt-8 rounded-2xl bg-surface-container-low p-4 flex flex-wrap items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold">
+              AGENDA MINGGU INI
+            </span>
+            <p class="font-body-md text-body-md text-on-surface">
+              Pameran Karya Vokasi &amp; Gelar Inovasi Siswa 2026 dibuka mulai Senin di Aula Utama SMKN 2.
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <a class="font-label-lg text-label-lg text-primary-container font-semibold hover:underline flex items-center gap-1" href="berita.html">
+              <span>Lihat Jadwal Lengkap</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full relative z-20 bg-primary-container text-on-primary">
+    <div class="h-[72px] max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between relative overflow-hidden">
+      <div class="flex items-center gap-3 opacity-30 select-none">
+        <svg class="w-24 h-10 stroke-current fill-none" stroke-width="1.5" viewbox="0 0 120 40">
+          <path d="M5,35 L115,35 M15,35 L15,18 L35,10 L55,18 L55,35 M55,35 L55,14 L85,8 L105,14 L105,35 M30,19 L40,19 M30,25 L40,25 M75,18 L90,18 M75,25 L90,25 M50,5 L60,5 L55,0 Z"></path>
+        </svg>
+        <span class="hidden lg:inline-block font-label-md text-label-md tracking-wider uppercase font-medium">SMKN 2 BL</span>
+      </div>
+      <div class="flex-1 text-center px-4">
+        <p class="font-label-uppercase text-label-uppercase tracking-[0.25em] text-on-primary font-bold">KREATIVITAS • INFORMASI • INSPIRASI</p>
+      </div>
+      <div class="flex items-center justify-end gap-2 opacity-60 text-right">
+        <span class="font-label-md text-label-md">Mading Digital © 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External Client Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

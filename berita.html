@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Berita &amp; Informasi - Mading Digital SMKN 2 Bandar Lampung</title>
+  
+  <!-- Web Fonts & Icons -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- External CSS System -->
+  <link rel="stylesheet" href="assets/css/theme.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+
+  <!-- Tailwind CSS Engine & Configuration -->
+  <script src="assets/js/tailwind.config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col relative selection:bg-secondary-container selection:text-on-secondary-container">
+  
+  <!-- Ambient background curves -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-60">
+    <svg class="absolute -top-24 left-1/4 w-[1100px] h-[550px] text-surface-container-high" fill="currentColor" viewbox="0 0 1100 550"><path d="M0,280 C320,120 480,420 800,240 C980,140 1060,260 1100,280 L1100,0 L0,0 Z"></path></svg>
+    <svg class="absolute top-1/3 -right-48 w-[800px] h-[600px] text-surface-container-highest opacity-70" fill="currentColor" viewbox="0 0 800 600"><path d="M120,0 C380,80 420,380 720,320 C820,300 800,500 800,600 L0,600 L0,180 Z"></path></svg>
+    <div class="absolute top-28 left-16 text-outline-variant opacity-40"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0L14 9L23 11L14 13L12 22L10 13L1 11L10 9Z"></path></svg></div>
+  </div>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-bright/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(107,48,64,0.06)]">
+    <div class="h-24 max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-5 group">
+        <div class="relative flex-shrink-0 flex items-center justify-center p-1 rounded-full bg-surface-container-low shadow-[0_2px_12px_rgba(107,48,64,0.08)] group-hover:scale-105 transition-transform">
+          <img alt="Logo SMKN 2 Bandar Lampung" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUMl9S6bNpirkdmuR1DYdo9aqLMSdHHkOC1iaBgqUeGedJlkXYZQCaGGKZukeX26voAeztCVgw7xvmdgwVqsJPB9A_gi9LerLBisXznLoBRggN20sX9c9dcF-Wqng440IQmbZu-ZE12c09yWgshrydzOpf487v6zzEeoeXUKuOn1CGmehPURffUAhFkhU7F390YCCN0apZLFos1Zu2J7fLvF8j4W8MrA80bOxZEG8"/>
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+          </div>
+        </div>
+        <div class="hidden sm:block h-12 w-[1px] bg-outline-variant"></div>
+        <div class="flex flex-col justify-center">
+          <div class="flex items-baseline gap-2">
+            <span class="font-headline-lg text-headline-lg text-primary-container tracking-tight leading-none">MADING DIGITAL</span>
+          </div>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="font-label-uppercase text-label-uppercase tracking-[0.25em] text-on-surface-variant font-semibold">SMK NEGERI 2 BANDAR LAMPUNG</span>
+          </div>
+          <div class="hidden xl:flex items-center gap-2 mt-0.5 text-on-surface-variant opacity-80">
+            <span class="w-6 h-[1px] bg-outline-variant"></span>
+            <span class="font-quote-editorial text-body-sm italic">Suara, Karya, dan Inspirasi dari Kita untuk Sekolah</span>
+            <span class="w-6 h-[1px] bg-outline-variant"></span>
+          </div>
+        </div>
+      </a>
+      <div class="flex items-center gap-4">
+        <div class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest shadow-[0_2px_10px_rgba(107,48,64,0.06)] text-primary-container">
+          <span class="material-symbols-outlined text-[18px] text-primary-container">calendar_today</span>
+          <span class="font-label-md text-label-md font-semibold tracking-wide">Edisi November 2026</span>
+        </div>
+        <button id="mobileMenuToggle" class="md:hidden flex items-center justify-center w-11 h-11 rounded-full bg-surface-container text-primary-container hover:bg-surface-container-high transition-colors" type="button" aria-label="Buka Menu">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Desktop Navigation Bar -->
+    <div class="w-full bg-surface-bright/70 pb-3 hidden md:block">
+      <div class="max-w-7xl mx-auto px-6 lg:px-16 flex justify-center">
+        <nav class="inline-flex items-center p-1.5 rounded-full bg-surface-container/80 backdrop-blur-md gap-1.5 shadow-sm">
+          <a class="font-label-lg text-label-lg px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="index.html">Beranda</a>
+          <a class="px-6 py-2 rounded-full bg-primary-container text-on-primary font-semibold shadow-[0_4px_12px_rgba(107,48,64,0.2)] transition-all" href="berita.html">Berita</a>
+          <a class="font-label-lg text-label-lg px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="wall-of-fame.html">Wall of Fame</a>
+          <a class="font-label-lg text-label-lg px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="ajukan-karya.html">Ajukan Karya</a>
+        </nav>
+      </div>
+    </div>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenuDrawer" class="hidden md:hidden px-6 pb-4 bg-surface-bright border-b border-outline-variant/30">
+      <nav class="flex flex-col gap-2 pt-2">
+        <a class="px-4 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium" href="index.html">Beranda</a>
+        <a class="px-4 py-2.5 rounded-2xl bg-primary-container text-on-primary font-semibold shadow-sm" href="berita.html">Berita</a>
+        <a class="px-4 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium" href="wall-of-fame.html">Wall of Fame</a>
+        <a class="px-4 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium" href="ajukan-karya.html">Ajukan Karya</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full pt-28 md:pt-36 relative z-10 flex-1 bg-transparent">
+    <div class="flex flex-col w-full">
+      <div class="w-full max-w-7xl mx-auto px-6 lg:px-16 pt-8 pb-20">
+        
+        <!-- Header Section -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+          <div class="space-y-2 max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary">
+              <span class="material-symbols-outlined text-[16px]">newspaper</span>
+              <span class="font-label-uppercase text-label-uppercase tracking-[0.2em]">Kabar Kampus Kejuruan</span>
+            </div>
+            <h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Berita &amp; Informasi</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">Semua informasi terbaru untuk siswa dan staf SMKN 2 Bandar Lampung.</p>
+          </div>
+          <div class="flex items-center gap-3 self-start md:self-auto bg-surface-container-low px-4 py-2.5 rounded-full shadow-sm">
+            <span class="material-symbols-outlined text-secondary text-[20px]">notifications_active</span>
+            <div class="flex flex-col">
+              <span class="font-label-md text-label-md text-on-surface font-semibold">Update Terjadwal</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">Sinkronisasi harian pukul 07:00 WIB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div class="bg-surface-container-lowest/80 backdrop-blur-md rounded-3xl p-4 md:p-6 shadow-sm mb-12 space-y-4">
+          <div class="relative w-full">
+            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+              <span class="material-symbols-outlined text-on-surface-variant text-[22px]">search</span>
+            </div>
+            <input class="w-full h-12 pl-12 pr-12 rounded-full bg-surface-bright text-on-surface placeholder:text-on-surface-variant/70 font-body-md text-body-md shadow-[inset_0_1px_3px_rgba(107,48,64,0.06)] focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="newsSearchInput" placeholder="Cari berita atau pengumuman..." type="text"/>
+            <button class="hidden absolute inset-y-0 right-0 pr-4 flex items-center text-on-surface-variant hover:text-primary transition-colors" id="clearSearchBtn" title="Hapus pencarian" type="button">
+              <span class="material-symbols-outlined text-[20px]">close</span>
+            </button>
+          </div>
+
+          <!-- Filter Chips -->
+          <div class="flex items-center justify-between gap-4 flex-wrap pt-1">
+            <div class="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0" id="filterChipsContainer">
+              <button class="filter-chip px-5 py-2 rounded-full font-label-md text-label-md transition-all bg-primary-container text-on-primary shadow-sm" data-category="semua" type="button">
+                Semua
+              </button>
+              <button class="filter-chip px-5 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container text-primary-container hover:bg-surface-container-high" data-category="pendidikan" type="button">
+                Pendidikan
+              </button>
+              <button class="filter-chip px-5 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container text-primary-container hover:bg-surface-container-high" data-category="kegiatan" type="button">
+                Kegiatan
+              </button>
+              <button class="filter-chip px-5 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container text-primary-container hover:bg-surface-container-high" data-category="akademik" type="button">
+                Akademik
+              </button>
+              <button class="filter-chip px-5 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container text-primary-container hover:bg-surface-container-high" data-category="pengumuman" type="button">
+                Pengumuman
+              </button>
+            </div>
+            <div class="hidden sm:flex items-center gap-2 text-on-surface-variant font-label-md text-label-md ml-auto">
+              <span>Menampilkan <strong class="text-primary font-bold" id="itemCountDisplay">9</strong> artikel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-Column Bento Grid of News Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="newsGrid">
+          
+          <!-- Card 1: Pelaksanaan TKA -->
+          <article class="news-card group flex flex-col justify-between bg-surface-container-lowest/90 backdrop-blur-sm rounded-3xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-200 cursor-pointer" data-card-category="pendidikan" data-title="pelaksanaan tka tes kemampuan akademik asesmen smk">
+            <a href="detail-pengumuman.html" class="flex flex-col h-full justify-between">
+              <div class="space-y-4">
+                <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-surface-container-high">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Pelaksanaan TKA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxdKwOliQj6VP6nPKTBot3mSlfUcMQvWozUEWXqBzRkHi-iwOwWIJtvYdIWvRrWMfu_DcgJ8wZrNeUCPAbqM0CgOdveJ3Fyej-R360m_umNUT2_Op36sGqUhmfr5vd_-0_wfQXhIvj77pv85A8N_Ha9SbkCbMXJ1C_3TfbqK860YDkeIC0oFXeNFUoIJ764FhrqXAT0DTG88hAftWp_rNU8_3DrHrhE6RmzzeVSM0"/>
+                  <div class="absolute top-3 left-3">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container text-primary font-label-uppercase text-label-uppercase tracking-wider shadow-sm">
+                      Pendidikan
+                    </span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                  <span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+                  <time datetime="2026-10-26">26 Oktober – 6 November 2026</time>
+                </div>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  Pelaksanaan TKA 2026
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                  Info asesmen kompetensi akademik siswa kejuruan sebagai tolok ukur kesiapan uji sertifikasi keahlian semester berjalan.
+                </p>
+              </div>
+              <div class="pt-5 mt-4 flex items-center justify-between bg-gradient-to-r from-transparent via-surface-container-low to-transparent rounded-xl px-2 py-1">
+                <span class="font-label-md text-label-md text-secondary font-semibold group-hover:text-primary transition-colors flex items-center gap-1">
+                  Baca Selengkapnya
+                  <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </span>
+                <span class="font-label-md text-label-md text-on-surface-variant/70">3 mnt baca</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 2: Lomba Poster -->
+          <article class="news-card group flex flex-col justify-between bg-surface-container-lowest/90 backdrop-blur-sm rounded-3xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-200 cursor-pointer" data-card-category="kegiatan" data-title="lomba poster sumpah pemuda seni desain grafis dkv">
+            <a href="detail-pengumuman.html" class="flex flex-col h-full justify-between">
+              <div class="space-y-4">
+                <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-surface-container-high">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Lomba Poster" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABklqFjo2Y_3r9faqf7pqyyiRwqrmPpMe41jlNyWzyoUqqqeS6_ZCZMb65m0rp4kOgm9kLBXbB2pTGkZk-bPrHc3fwaauFAkl4aQsdj7zPLLZwQbV6ID8p5zH-1rzIw5QETbR-E4Vv3N90baYFTWNB8ccfPkfMbdyg8B1RbgU82DpNwcxgDtlOK9liJOpeRMwvuq_8MiLue4eCJCZuNM2z52T5Y3An3Uf3c-OYQ3c"/>
+                  <div class="absolute top-3 left-3">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-uppercase text-label-uppercase tracking-wider shadow-sm">
+                      Kegiatan
+                    </span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                  <span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+                  <time datetime="2026-10-28">28 Oktober 2026</time>
+                </div>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  Lomba Poster Sumpah Pemuda
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                  Peringatan Hari Sumpah Pemuda berhadiah sertifikat &amp; beasiswa pembinaan bagi karya visual paling inspiratif.
+                </p>
+              </div>
+              <div class="pt-5 mt-4 flex items-center justify-between bg-gradient-to-r from-transparent via-surface-container-low to-transparent rounded-xl px-2 py-1">
+                <span class="font-label-md text-label-md text-secondary font-semibold group-hover:text-primary transition-colors flex items-center gap-1">
+                  Baca Selengkapnya
+                  <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </span>
+                <span class="font-label-md text-label-md text-on-surface-variant/70">2 mnt baca</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 3: Berita Duka -->
+          <article class="news-card group flex flex-col justify-between bg-surface-container-lowest/90 backdrop-blur-sm rounded-3xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-200 cursor-pointer" data-card-category="kegiatan" data-title="berita duka belasungkawa keluarga besar smkn 2">
+            <a href="detail-pengumuman.html" class="flex flex-col h-full justify-between">
+              <div class="space-y-4">
+                <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-surface-container-high">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Berita Duka" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAggzeCqagF8ooHz2mZMVcqxtl-0QkdhUhR6x4_QUrFMFu_fruyPW4UCJNm31SX2A0CmdCMNTuYd6Mnd4AByIftBLuC3Rkc-uIZD95sLdHYIsfq8A_zIMqog_FgKKYPqh4FOcExr99xEuFR3BBnVN-tpNdDvejYfNTl0y6piBfPdnYrN1d8lKnH8t93JXN_2rJ6Ke3pXD9cjI3iD6pnalyBY3gsvwdwerXF9_RhxLw"/>
+                  <div class="absolute top-3 left-3">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-uppercase text-label-uppercase tracking-wider shadow-sm">
+                      Kegiatan
+                    </span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                  <span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+                  <time datetime="2026-10-28">28 Oktober 2026</time>
+                </div>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  Berita Duka
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                  Belasungkawa keluarga besar SMK Negeri 2 Bandar Lampung atas berpulangnya salah satu pendidik teladan kami.
+                </p>
+              </div>
+              <div class="pt-5 mt-4 flex items-center justify-between bg-gradient-to-r from-transparent via-surface-container-low to-transparent rounded-xl px-2 py-1">
+                <span class="font-label-md text-label-md text-secondary font-semibold group-hover:text-primary transition-colors flex items-center gap-1">
+                  Baca Selengkapnya
+                  <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </span>
+                <span class="font-label-md text-label-md text-on-surface-variant/70">1 mnt baca</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 4: Jadwal PAS -->
+          <article class="news-card group flex flex-col justify-between bg-surface-container-lowest/90 backdrop-blur-sm rounded-3xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-200 cursor-pointer" data-card-category="akademik" data-title="jadwal penilaian akhir semester pas ganjil ujian">
+            <a href="detail-pengumuman.html" class="flex flex-col h-full justify-between">
+              <div class="space-y-4">
+                <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-surface-container-high">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Jadwal PAS" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgUDfuVI_PAoraFZHgcxTLNl5vssvgLBrfGce7iNVchsbx7Clh9eKbfV2xFYVJiR_u99fGDNa9C7klL2Y6dfcteWpuRdzEYhIh0V9myzr5lN3HluY_uBu0i6F0j44htgwZStnCsU-QXiehGakoh7roEUqKLh-0y7PDl9AlmnaYB-qkialHo1ijvNR7L8JfNi7yN0YjGvQOMu94DH8Qs2-cMTJ0dPINYXX6swTwRp0"/>
+                  <div class="absolute top-3 left-3">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-highest text-primary font-label-uppercase text-label-uppercase tracking-wider shadow-sm">
+                      Akademik
+                    </span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                  <span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+                  <time datetime="2026-11-02">2 November 2026</time>
+                </div>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  Jadwal Penilaian Akhir Semester
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                  Pembagian jadwal PAS ganjil tahun ajaran 2026/2027 beserta ketentuan kartu peserta dan tata tertib ujian daring-luring.
+                </p>
+              </div>
+              <div class="pt-5 mt-4 flex items-center justify-between bg-gradient-to-r from-transparent via-surface-container-low to-transparent rounded-xl px-2 py-1">
+                <span class="font-label-md text-label-md text-secondary font-semibold group-hover:text-primary transition-colors flex items-center gap-1">
+                  Baca Selengkapnya
+                  <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </span>
+                <span class="font-label-md text-label-md text-on-surface-variant/70">4 mnt baca</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 5: Hari Pahlawan -->
+          <article class="news-card group flex flex-col justify-between bg-surface-container-lowest/90 backdrop-blur-sm rounded-3xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-200 cursor-pointer ring-2 ring-secondary/40" data-card-category="kegiatan" data-title="upacara peringatan hari pahlawan seragam dinas batik lapangan">
+            <a href="detail-pengumuman.html" class="flex flex-col h-full justify-between">
+              <div class="space-y-4">
+                <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-surface-container-high">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Upacara Hari Pahlawan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpaLtwwxf2VjU7to5TUZv8nTZaCJDaUqa1Z7Sobdn4UMWiG8cbdyjS8D90vCXiH3CvheYzGk77-Trgew59OpOwRkweS3mSCRvSuq5msCS1KVEMtCWbgiI6lvYtsHZSbehBU_soLZ_aSVxvF37k5OX1_pFKz6B4tNNeZQkyTdqPZMGyK-kI4lNDAihdoqCw6ReNvVC6ytfUZqqRLfLtoRVOVYrjQrNFykWC3QiySIQ"/>
+                  <div class="absolute top-3 left-3">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-uppercase text-label-uppercase tracking-wider shadow-sm">
+                      Kegiatan
+                    </span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                  <span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+                  <time datetime="2026-11-10">10 November 2026</time>
+                </div>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  Upacara Peringatan Hari Pahlawan
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                  Seluruh civitas akademika mengenakan seragam dinas &amp; batik khas daerah untuk menghormati jasa pahlawan kemerdekaan.
+                </p>
+              </div>
+              <div class="pt-5 mt-4 flex items-center justify-between bg-gradient-to-r from-transparent via-surface-container-low to-transparent rounded-xl px-2 py-1">
+                <span class="font-label-md text-label-md text-secondary font-semibold group-hover:text-primary transition-colors flex items-center gap-1">
+                  Baca Selengkapnya
+                  <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </span>
+                <span class="font-label-md text-label-md text-on-surface-variant/70">2 mnt baca</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 6: Pembelajaran Daring -->
+          <article class="news-card group flex flex-col justify-between bg-surface-container-lowest/90 backdrop-blur-sm rounded-3xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-200 cursor-pointer" data-card-category="pendidikan" data-title="pembelajaran daring kelas xi praktik bengkel lab komputer">
+            <a href="detail-pengumuman.html" class="flex flex-col h-full justify-between">
+              <div class="space-y-4">
+                <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-surface-container-high">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Pembelajaran Daring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbj-7aoqwHM7urcjQUkXDbY_AZWF1u_2X9F3xErjfQV8q1-yyvs5ZsE0jbCOVEsMQWl211dkA0cusQfHqbuSl6DBF3RCV5KFEGJj37DmBHYwbqc6Ex5ckt4mAWxT38DCPj60aPXsela8lD7vlqRKYDa3CgmUVSTEvMfnt6usSPoxnVxZT4lF2ni1TuXHnaG8ENL2b5GKyLIMPeeq3MpxjOAw4r_XDaz5pCEoT9zwg"/>
+                  <div class="absolute top-3 left-3">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container text-primary font-label-uppercase text-label-uppercase tracking-wider shadow-sm">
+                      Pendidikan
+                    </span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                  <span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+                  <time datetime="2026-10-26">26 Oktober 2026</time>
+                </div>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  Pembelajaran Daring Kelas XI
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                  Penyesuaian jadwal praktik bengkel dan lab komputer terpadu selama masa pemeliharaan instalasi jaringan sekolah.
+                </p>
+              </div>
+              <div class="pt-5 mt-4 flex items-center justify-between bg-gradient-to-r from-transparent via-surface-container-low to-transparent rounded-xl px-2 py-1">
+                <span class="font-label-md text-label-md text-secondary font-semibold group-hover:text-primary transition-colors flex items-center gap-1">
+                  Baca Selengkapnya
+                  <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </span>
+                <span class="font-label-md text-label-md text-on-surface-variant/70">3 mnt baca</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 7: Pengumuman Libur -->
+          <article class="news-card group flex flex-col justify-between bg-surface-container-lowest/90 backdrop-blur-sm rounded-3xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-200 cursor-pointer" data-card-category="pengumuman" data-title="pengumuman libur sekolah akreditasi dispensasi">
+            <a href="detail-pengumuman.html" class="flex flex-col h-full justify-between">
+              <div class="space-y-4">
+                <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-surface-container-high">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Libur Sekolah" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8xFLnwjaIO0UYv_PxEj1KpJ9NuJNmQKr0-HR61EzYvinFfmm0IDAdJ5zi6QV_jUMSFgIUTNxFYAp7wmb0hOp_fJAvYN2i53lhdQJruU8AvtOn769zjN3O-17KvvTvGmofoXYxIo5AmO1FZug4laGd4xCNtU3IySkIJpdqs9g1MN-9Stb7Hta9YYhoje9LYPQGfqvC_9FRmN5bt3_Ptv2fmJ8Axc8ScPwipilCjFA"/>
+                  <div class="absolute top-3 left-3">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-uppercase text-label-uppercase tracking-wider shadow-sm">
+                      Pengumuman
+                    </span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                  <span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+                  <time datetime="2026-11-05">5 November 2026</time>
+                </div>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  Pengumuman Libur Sekolah
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                  Dispensasi libur khusus kegiatan akreditasi sekolah untuk pemutakhiran standar fasilitas vokasi unggulan.
+                </p>
+              </div>
+              <div class="pt-5 mt-4 flex items-center justify-between bg-gradient-to-r from-transparent via-surface-container-low to-transparent rounded-xl px-2 py-1">
+                <span class="font-label-md text-label-md text-secondary font-semibold group-hover:text-primary transition-colors flex items-center gap-1">
+                  Baca Selengkapnya
+                  <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </span>
+                <span class="font-label-md text-label-md text-on-surface-variant/70">1 mnt baca</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 8: Magang Jepang -->
+          <article class="news-card group flex flex-col justify-between bg-surface-container-lowest/90 backdrop-blur-sm rounded-3xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-200 cursor-pointer" data-card-category="pendidikan" data-title="sosialisasi program magang industri jepang bkk bursa kerja khusus">
+            <a href="detail-pengumuman.html" class="flex flex-col h-full justify-between">
+              <div class="space-y-4">
+                <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-surface-container-high">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Magang Jepang" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Q7D-ycOn93fqltHjBS2jmJLbjXBWvhzGELCB9eJfNLdkTPNlXvkJ0FZ8XDGAKbTkuCqlAwcGQ2Nw8e7nQCKgPBPP75gfRlWvEwHCCdyz3JF9Im4ndLQFcyJAQB03NQAmpMVihMV0bXTGCrOj0Dyjfk0h8TVZpdxSx-j5pnB4o-tcKbwqvAVdPCToKZX9Dw5IkcQ73PzouwsqthrNyegjQiVFenyMexFQrWKyGnY"/>
+                  <div class="absolute top-3 left-3">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container text-primary font-label-uppercase text-label-uppercase tracking-wider shadow-sm">
+                      Pendidikan
+                    </span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                  <span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+                  <time datetime="2026-11-15">15 November 2026</time>
+                </div>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  Sosialisasi Magang Jepang
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                  Kerjasama BKK SMKN 2 dengan mitra industri manufaktur &amp; teknologi di Osaka untuk penempatan kerja lulusan.
+                </p>
+              </div>
+              <div class="pt-5 mt-4 flex items-center justify-between bg-gradient-to-r from-transparent via-surface-container-low to-transparent rounded-xl px-2 py-1">
+                <span class="font-label-md text-label-md text-secondary font-semibold group-hover:text-primary transition-colors flex items-center gap-1">
+                  Baca Selengkapnya
+                  <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </span>
+                <span class="font-label-md text-label-md text-on-surface-variant/70">5 mnt baca</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 9: Bazar Siswa -->
+          <article class="news-card group flex flex-col justify-between bg-surface-container-lowest/90 backdrop-blur-sm rounded-3xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-200 cursor-pointer" data-card-category="kegiatan" data-title="bazar kewirausahaan siswa dkv tata busana produk kreatif pameran">
+            <a href="detail-pengumuman.html" class="flex flex-col h-full justify-between">
+              <div class="space-y-4">
+                <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-surface-container-high">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Bazar Siswa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR9py0H-xFri-vmP4Ra0cUvbZc9ZKErAblVneEfueTVLApFiSUF_PPZUVPjbwsSLpRtwHukyyysnoFiqnbgUzZ8vBNKwB0rGWXbNAOLHgvj04Lj4BBXbGYt18pjsybgzJoiEu5n4KRAo8xTBHm2dCGqoLYrHoCT6g1OBX0FKQ3FMKbQhX8vLlpU4vvpFUWFHOf6l4fCVw0VTNZLqNj9VFGL41bYYjXonv9Om91b9Q"/>
+                  <div class="absolute top-3 left-3">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-uppercase text-label-uppercase tracking-wider shadow-sm">
+                      Kegiatan
+                    </span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                  <span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+                  <time datetime="2026-11-18">18 November 2026</time>
+                </div>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  Bazar Siswa DKV &amp; Tata Busana
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                  Pameran karya kreatif dan produk wirausaha muda kejuruan langsung di pelataran aula SMKN 2 Bandar Lampung.
+                </p>
+              </div>
+              <div class="pt-5 mt-4 flex items-center justify-between bg-gradient-to-r from-transparent via-surface-container-low to-transparent rounded-xl px-2 py-1">
+                <span class="font-label-md text-label-md text-secondary font-semibold group-hover:text-primary transition-colors flex items-center gap-1">
+                  Baca Selengkapnya
+                  <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </span>
+                <span class="font-label-md text-label-md text-on-surface-variant/70">3 mnt baca</span>
+              </div>
+            </a>
+          </article>
+
+        </div>
+
+        <!-- Empty State View -->
+        <div class="hidden flex-col items-center justify-center text-center py-20 px-4 bg-surface-container-lowest/70 backdrop-blur-sm rounded-3xl mt-6 shadow-sm" id="emptyState">
+          <div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center text-secondary mb-4">
+            <span class="material-symbols-outlined text-[40px]">search_off</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Belum ada berita yang cocok</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-6">
+            Coba gunakan kata kunci lain atau bersihkan penyaring kategori untuk melihat artikel yang tersedia.
+          </p>
+          <button class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary transition-all" id="resetFilterBtn" type="button">
+            <span class="material-symbols-outlined text-[18px]">restart_alt</span>
+            Reset Filter
+          </button>
+        </div>
+
+        <!-- Pagination Section -->
+        <div class="mt-14 flex items-center justify-center gap-2" id="paginationNav">
+          <button aria-current="page" class="w-10 h-10 rounded-full flex items-center justify-center font-label-lg text-label-lg bg-primary-container text-on-primary shadow-sm hover:scale-105 transition-transform" type="button">
+            1
+          </button>
+          <button class="w-10 h-10 rounded-full flex items-center justify-center font-label-lg text-label-lg bg-surface-container-lowest text-primary hover:bg-surface-container transition-colors shadow-sm" type="button">
+            2
+          </button>
+          <button class="w-10 h-10 rounded-full flex items-center justify-center font-label-lg text-label-lg bg-surface-container-lowest text-primary hover:bg-surface-container transition-colors shadow-sm" type="button">
+            3
+          </button>
+          <button class="inline-flex items-center gap-1.5 px-5 h-10 rounded-full font-label-lg text-label-lg bg-surface-container-lowest text-primary-container hover:bg-surface-container shadow-sm transition-all" type="button">
+            <span>Selanjutnya</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full relative z-20 bg-primary-container text-on-primary">
+    <div class="h-[72px] max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between relative overflow-hidden">
+      <div class="flex items-center gap-3 opacity-30 select-none">
+        <svg class="w-24 h-10 stroke-current fill-none" stroke-width="1.5" viewbox="0 0 120 40">
+          <path d="M5,35 L115,35 M15,35 L15,18 L35,10 L55,18 L55,35 M55,35 L55,14 L85,8 L105,14 L105,35 M30,19 L40,19 M30,25 L40,25 M75,18 L90,18 M75,25 L90,25 M50,5 L60,5 L55,0 Z"></path>
+        </svg>
+        <span class="hidden lg:inline-block font-label-md text-label-md tracking-wider uppercase font-medium">SMKN 2 BL</span>
+      </div>
+      <div class="flex-1 text-center px-4">
+        <p class="font-label-uppercase text-label-uppercase tracking-[0.25em] text-on-primary font-bold">KREATIVITAS • INFORMASI • INSPIRASI</p>
+      </div>
+      <div class="flex items-center justify-end gap-2 opacity-60 text-right">
+        <span class="font-label-md text-label-md">Mading Digital © 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External Client Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
